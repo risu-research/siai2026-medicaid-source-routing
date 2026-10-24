@@ -1,6 +1,6 @@
 # Medicaid appeals audit: source-routing experiments
 
-This repository contains the executable experiments accompanying **SIAI 2026, paper #110**, a case study of evidence-bound corrections in Medicaid appeals audits.
+This repository provides the reproducibility artifact for Moon Hwan Lee's *Corrective Action in Medicaid Appeals: Legal Authority and Source Retrieval* (SIAI 2026, paper #110).
 
 The study uses publicly reported Medicaid compliance reviews from Nevada. It tests whether lexical retrieval can locate a designated audit requirement and how the results change when that requirement is unavailable. The input cards and target labels were transcribed by the author from the cited reports.
 
