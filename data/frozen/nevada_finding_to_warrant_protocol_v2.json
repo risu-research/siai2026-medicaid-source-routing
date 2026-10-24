@@ -1,0 +1,41 @@
+{
+  "study": "Held-out Finding-to-Warrant Exact-Removal Replication",
+  "status": "FROZEN_BEFORE_SCORING",
+  "parent": "nevada_heldout_protocol_v1.json",
+  "primary_question": "Can an observed audit deficiency be routed to its exact governing requirement, and does retrieval abstain when that exact warrant is removed?",
+  "targets": [
+    14,
+    15,
+    18,
+    19,
+    20,
+    24,
+    26,
+    28
+  ],
+  "candidate_pool": "Same frozen 16 requirement cards as v1.",
+  "query_text": "HSAG Findings content, not Required Actions; identifiers and citations excluded from lexical text.",
+  "methods": [
+    "tfidf_all",
+    "tfidf_stage",
+    "bm25_all",
+    "bm25_stage",
+    "verified_id",
+    "stage_plus_verified_id"
+  ],
+  "retrieval_parameters": "Identical to v1; no parameter changes after seeing v1 results.",
+  "conditions": {
+    "intact": "all cards",
+    "removed": "remove exact same-item requirement only"
+  },
+  "primary_metrics": [
+    "intact exact routing",
+    "removal abstention",
+    "removal false substitution"
+  ],
+  "threshold_frontier": {
+    "same_as_v1": true,
+    "constraint": "intact correct-and-answered >=7/8"
+  },
+  "interpretation": "This replication reduces lexical near-duplication between Required Action and Requirement. If intact routing collapses, the limitation is reported rather than repaired post hoc."
+}

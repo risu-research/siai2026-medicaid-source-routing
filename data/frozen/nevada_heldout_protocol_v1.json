@@ -1,0 +1,56 @@
+{
+  "study": "Held-out Exact-Warrant Removal Test",
+  "status": "FROZEN_BEFORE_SCORING",
+  "primary_question": "When the exact authoritative requirement that warrants a corrective action is absent, will retrieval substitute a neighboring in-scope requirement instead of abstaining?",
+  "dataset_file": "nevada_heldout_dataset_v1.json",
+  "target_items": [14,15,18,19,20,24,26,28],
+  "candidate_pool": "All 16 requirement cards in the frozen dataset; eight actual Not Met target requirements plus eight adjacent Met requirements from the same Standard X workflow.",
+  "query_text": "Verbatim or minimally normalized HSAG Required Actions text for each target item. Item identifiers and citations are not included in lexical query text.",
+  "warrant_text": "Requirement text for each candidate item. Item identifiers and citations are metadata and are not included in lexical ranking text.",
+  "metadata": ["jurisdiction", "contractor", "program", "review_period", "standard", "procedural_stage", "evidence_role", "item_id"],
+  "fixed_scope": {
+    "jurisdiction": "Nevada",
+    "contractor": "SilverSummit Healthplan, Inc.",
+    "program": "Medicaid managed care",
+    "review_period": "September 1, 2023–August 31, 2024",
+    "standard": "Standard X—Grievance and Appeal Systems",
+    "evidence_role": "warrant"
+  },
+  "retrieval_methods": {
+    "tfidf_all": "TF-IDF cosine over all warrant cards; word unigrams+bigrams; sublinear TF; no tuned abstention threshold.",
+    "tfidf_stage": "Same TF-IDF ranking after exact procedural_stage + evidence_role filtering.",
+    "bm25_all": "BM25 lexical ranking over all warrant cards using fixed k1=1.5, b=0.75.",
+    "bm25_stage": "BM25 after procedural_stage + evidence_role filtering.",
+    "verified_id": "Select only a card whose structured item_id equals the query's authoritative item_id; abstain if no such card is present. The item_id is never appended to lexical text.",
+    "stage_plus_verified_id": "Apply stage/evidence-role scope and then require exact item_id; abstain if missing."
+  },
+  "conditions": {
+    "intact": "All 16 frozen cards are present.",
+    "exact_warrant_removed": "For each target query separately, remove only the card with the same item_id; retain every neighboring and distractor card unchanged. Correct behavior is abstention.",
+    "corrupted_identifier": "Secondary adversarial diagnostic: replace the target item_id with the numerically nearest extant candidate item_id while leaving query text unchanged. This is reported separately and is not part of the primary confirmatory result."
+  },
+  "primary_metrics": [
+    "Intact exact-warrant routing accuracy (8 targets)",
+    "Exact-warrant-removal correct abstention rate",
+    "Exact-warrant-removal false-substitution rate",
+    "Identity and item distance of each substituted warrant"
+  ],
+  "secondary_metrics": [
+    "Top cosine/BM25 score before and after warrant removal",
+    "Top1-minus-top2 score margin before and after removal",
+    "Score drop caused by exact-warrant removal",
+    "Threshold frontier: for score thresholds and margin thresholds fixed on a grid, best removal abstention achievable while retaining at least 7/8 intact correct answers"
+  ],
+  "threshold_frontier": {
+    "score_threshold_grid": "0.00 to 1.00 inclusive in 0.01 increments for TF-IDF cosine",
+    "margin_threshold_grid": "0.00 to 0.50 inclusive in 0.01 increments",
+    "rule": "abstain if top_score < score_threshold OR top1_minus_top2 < margin_threshold",
+    "constraint": "intact correct-and-answered count >= 7 of 8",
+    "note": "This is a prespecified diagnostic frontier, not a tuned production threshold."
+  },
+  "success_interpretation": {
+    "replicated_fail_open": "If lexical/stage-constrained retrieval frequently substitutes another card after exact removal while verified identity abstains, the Colorado post-hoc failure mode generalizes to a new jurisdiction and contractor.",
+    "no_replication": "If lexical/stage-constrained retrieval reliably abstains after removal without large intact losses, narrow the original claim and report the boundary condition instead of forcing replication.",
+    "identifier_limit": "If corrupted identifiers route to the wrong card, report that identifiers must themselves be bound to the authoritative source; identifier presence alone is not sufficient."
+  }
+}

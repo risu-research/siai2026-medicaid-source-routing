@@ -1,0 +1,16 @@
+# Local environments and Python caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Derived replay and sensitivity outputs; expected baseline files are tracked separately
+work/
+results/reproduced/
+results/sensitivity/
+
+# Local editor and operating system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

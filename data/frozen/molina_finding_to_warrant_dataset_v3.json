@@ -1,0 +1,199 @@
+{
+  "study": "Held-out Exact-Warrant Removal Test — Contractor Replication",
+  "source": {
+    "title": "Molina Healthcare of Nevada Inc. SFY 2025 Compliance Review",
+    "publisher": "Nevada Division of Health Care Financing and Policy / Health Services Advisory Group",
+    "standard": "Standard X—Grievance and Appeal Systems",
+    "review_period": "SFY 2025 review (report published 2025)",
+    "report_year": 2025,
+    "relation_to_prior": "Independent contractor replication under the same Nevada Standard X; Molina findings were not used to construct the SilverSummit v1/v2 queries."
+  },
+  "targets": [
+    6,
+    8,
+    14,
+    15,
+    18,
+    19,
+    23
+  ],
+  "cards": [
+    {
+      "item_id": 4,
+      "stage": "grievance",
+      "role": "warrant",
+      "requirement": "The MCO acknowledges receipt of each grievance.",
+      "target": false,
+      "page": "A-46"
+    },
+    {
+      "item_id": 5,
+      "stage": "grievance",
+      "role": "warrant",
+      "requirement": "The MCO ensures that individuals who make decisions on grievances were not involved in any previous level of review or decision-making, nor subordinate to such an individual, and that decisions involving clinical matters are made by individuals with appropriate clinical expertise.",
+      "target": false,
+      "page": "A-46"
+    },
+    {
+      "item_id": 6,
+      "stage": "grievance",
+      "role": "warrant",
+      "requirement": "The MCO resolves each grievance and provides written notice as expeditiously as the member’s health condition requires, within 45 calendar days from the day the MCO receives the grievance.",
+      "target": true,
+      "page": "B-1",
+      "finding_query": "The Member Handbook and Provider Manual told members and providers that grievance resolution could take up to 90 calendar days instead of 45. Four of five grievance acknowledgement notices reviewed after the site review also carried the incorrect 90-day resolution time frame, even though the contract amendment establishing 45 days had been executed months earlier."
+    },
+    {
+      "item_id": 7,
+      "stage": "grievance",
+      "role": "warrant",
+      "requirement": "The MCO may extend the grievance resolution time frame by up to fourteen calendar days if the member requests the extension or the MCO shows to the satisfaction of DHCFP that additional information is needed and explains how the delay is in the member’s interest.",
+      "target": false,
+      "page": "A-? adjacent requirement"
+    },
+    {
+      "item_id": 8,
+      "stage": "grievance",
+      "role": "warrant",
+      "requirement": "If the MCO extends the grievance resolution time frame not at the request of the member after DHCFP approval, it makes reasonable efforts to give the member prompt oral notice of the delay and, within two calendar days, gives written notice of the reason for the extension and informs the member of the right to file a grievance if the member disagrees.",
+      "target": true,
+      "page": "B-3",
+      "finding_query": "The grievance extension letter functioned as a pre-extension notice: it told members that an extension had been requested and that another notice would follow if DHCFP approved it. The review found no separate notice to members after approval, so the current notice and process did not provide assurance of compliance."
+    },
+    {
+      "item_id": 13,
+      "stage": "appeal_filing",
+      "role": "warrant",
+      "requirement": "The member may file an appeal orally or in writing. With the written consent of the member, a provider or an authorized representative may request an appeal on behalf of the member. If an appeal is filed orally, the MCO documents the contact for tracking purposes and to establish the earliest date of receipt. The MCO must not require the member to submit a written appeal after making an oral appeal.",
+      "target": false,
+      "page": "A-47 to A-48"
+    },
+    {
+      "item_id": 14,
+      "stage": "appeal_handling",
+      "role": "warrant",
+      "requirement": "If the MCO denies a request for expedited resolution of an appeal, it transfers the appeal to the time frame for standard resolution, makes reasonable efforts to give the member prompt oral notice of the delay, and within two calendar days gives the member written notice of the reason for denying the expedited appeal resolution time frame and informs the member of the right to file a grievance if the member disagrees.",
+      "target": true,
+      "page": "A-49 to A-50",
+      "finding_query": "A case file for a denied expedited appeal resolution request contained no evidence that the member received prompt oral notice of the denial, although written notice was provided."
+    },
+    {
+      "item_id": 15,
+      "stage": "appeal_handling",
+      "role": "warrant",
+      "requirement": "The MCO acknowledges receipt of each appeal.",
+      "target": true,
+      "page": "A-50 to A-51",
+      "finding_query": "The appeal acknowledgement timeliness report showed two standard appeals acknowledged on day seven and day eight rather than within the plan’s five-calendar-day policy, and one expedited appeal acknowledged about 63 hours after receipt rather than within 24 hours."
+    },
+    {
+      "item_id": 16,
+      "stage": "appeal_handling",
+      "role": "warrant",
+      "requirement": "The MCO ensures that individuals who make decisions on appeals were not involved in a previous level of review or decision-making, have appropriate clinical expertise when required, and take into account all comments, documents, records, and other information submitted by the member or representative.",
+      "target": false,
+      "page": "A-51 to A-52"
+    },
+    {
+      "item_id": 17,
+      "stage": "appeal_handling",
+      "role": "warrant",
+      "requirement": "The MCO treats oral inquiries seeking to appeal an adverse benefit determination as appeals.",
+      "target": false,
+      "page": "A-52"
+    },
+    {
+      "item_id": 18,
+      "stage": "appeal_handling",
+      "role": "warrant",
+      "requirement": "The MCO provides the member a reasonable opportunity, in person and in writing, to present evidence and testimony and make legal and factual arguments. The MCO informs the member of the limited time available for this sufficiently in advance of the resolution time frame for appeals in the case of expedited resolution.",
+      "target": true,
+      "page": "A-52 to A-54",
+      "finding_query": "Two standard appeal acknowledgement records used an expedited-appeal notice and told members they had only 24 hours to present evidence. The expedited acknowledgement process relied on mailed notice that would not give a member sufficient time to present evidence before resolution, and the ABD notice did not fully explain the in-person opportunity or limited time."
+    },
+    {
+      "item_id": 19,
+      "stage": "appeal_handling",
+      "role": "warrant",
+      "requirement": "The MCO provides the member and his or her representative the member's case file, including medical records, other documents and records, and any new or additional evidence considered, relied upon, or generated by the MCO in connection with the appeal of the adverse benefit determination. This information is provided free of charge and sufficiently in advance of the appeal resolution time frame.",
+      "target": true,
+      "page": "A-54 to A-55",
+      "finding_query": "The expedited appeal acknowledgement process relied on mailed notice that would not give a member enough time to learn of the right to request, receive, and review the case file before an expedited decision. The ABD notice also described only a right to request the rules used in the decision, not the full case file and evidence."
+    },
+    {
+      "item_id": 20,
+      "stage": "appeal_resolution",
+      "role": "warrant",
+      "requirement": "The MCO resolves standard appeals and sends written notice to the affected parties as expeditiously as the member's health condition requires, but no later than 30 calendar days from the day the MCO receives the appeal.",
+      "target": false,
+      "page": "A-55 to A-56"
+    },
+    {
+      "item_id": 21,
+      "stage": "appeal_resolution",
+      "role": "warrant",
+      "requirement": "The MCO resolves expedited appeals and sends written notice to the affected parties no later than 72 hours after the MCO receives the appeal.",
+      "target": false,
+      "page": "A-56"
+    },
+    {
+      "item_id": 23,
+      "stage": "appeal_resolution",
+      "role": "warrant",
+      "requirement": "If the MCO extends the standard or expedited appeal resolution time frames not at the request of the member, it makes reasonable efforts to give the member prompt oral notice of the delay, gives written notice within two calendar days explaining the extension and grievance right, and resolves the appeal no later than the date the extension expires.",
+      "target": true,
+      "page": "A-57 to A-58",
+      "finding_query": "The appeal extension notice was a pre-extension notice stating that DHCFP approval had been requested and that another notice would follow if approved, but the process had no separate notice after approval. The review concluded that the current notice and process did not provide assurance of compliance."
+    },
+    {
+      "item_id": 24,
+      "stage": "appeal_resolution",
+      "role": "warrant",
+      "requirement": "If the MCO fails to adhere to the appeal notice and timing requirements, the member is deemed to have exhausted the MCO's appeals process and may initiate a State fair hearing.",
+      "target": false,
+      "page": "A-58 to A-59"
+    },
+    {
+      "item_id": 25,
+      "stage": "appeal_resolution",
+      "role": "warrant",
+      "requirement": "For all appeals, the MCO provides written notice of the appeal resolution that includes the results and completion date and, when the appeal is not resolved wholly in favor of the member, the right to request a State fair hearing, the right to request and receive benefits while the hearing is pending, and possible liability for those benefits if the hearing decision upholds the MCO's adverse benefit determination.",
+      "target": false,
+      "page": "A-59 to A-60"
+    },
+    {
+      "item_id": 26,
+      "stage": "appeal_resolution",
+      "role": "warrant",
+      "requirement": "For notice of a standard and expedited appeal resolution, the MCO makes a good faith effort to provide oral notice of the disposition in addition to the required written notice.",
+      "target": false,
+      "page": "A-60"
+    },
+    {
+      "item_id": 27,
+      "stage": "state_fair_hearing",
+      "role": "warrant",
+      "requirement": "The member may request a State fair hearing only after receiving notice that the MCO is upholding the adverse benefit determination related to the appeal. With the written consent of the member, a provider or an authorized representative may request a State fair hearing on behalf of the member.",
+      "target": false,
+      "page": "A-60 to A-61"
+    },
+    {
+      "item_id": 28,
+      "stage": "state_fair_hearing",
+      "role": "warrant",
+      "requirement": "The member has 90 calendar days from the date of the MCO's notice of appeal resolution to request a State fair hearing.",
+      "target": false,
+      "page": "A-61 to A-62"
+    },
+    {
+      "item_id": 29,
+      "stage": "continuation_of_benefits",
+      "role": "warrant",
+      "requirement": "The MCO continues the member's benefits when the member timely appeals, the appeal involves termination, suspension, or reduction of previously authorized services, the services were ordered by an authorized provider, the original authorization has not expired, and the member timely requests continuation of benefits.",
+      "target": false,
+      "page": "A-62 to A-63"
+    }
+  ],
+  "query_mode": "HSAG finding -> governing requirement",
+  "construction_note": "All seven Standard X Not Met elements reported for Molina are used as targets; no target was selected by retrieval outcome."
+}

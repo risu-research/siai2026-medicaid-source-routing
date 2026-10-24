@@ -1,0 +1,40 @@
+{
+  "status": "FROZEN_BEFORE_SCORING",
+  "primary_question": "When the exact governing warrant is removed, does semantic retrieval abstain or substitute a neighboring Standard X requirement?",
+  "targets": "All seven Molina Standard X Not Met elements: 6, 8, 14, 15, 18, 19, 23.",
+  "candidate_pool": "Official Standard X requirement cards comprising all 16 cards from the prior SilverSummit held-out pool plus the local grievance cluster 4-8; item numbers and citations are not appended to lexical text.",
+  "query": "Concise faithful transcription of HSAG Findings, with item identifiers and CFR citations excluded from query text.",
+  "conditions": [
+    "intact: exact warrant included",
+    "removed: only exact same-item warrant removed"
+  ],
+  "correct_removed_behavior": "ABSTAIN; any other selected item is a false substitution.",
+  "methods": [
+    "TF-IDF word 1-2 grams all candidates",
+    "TF-IDF stage constrained",
+    "BM25 all candidates",
+    "BM25 stage constrained",
+    "verified structured item ID",
+    "stage plus verified structured item ID"
+  ],
+  "tfidf": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "sublinear_tf": true,
+    "l2_norm": true
+  },
+  "bm25": {
+    "k1": 1.5,
+    "b": 0.75
+  },
+  "threshold_frontier": {
+    "score_threshold": "0.00..1.00 step 0.01",
+    "margin_threshold": "0.00..0.50 step 0.01",
+    "eligibility": "retain at least 6/7 intact exact-and-answered targets",
+    "rule": "abstain if top score < score threshold OR top1-top2 margin < margin threshold"
+  },
+  "secondary_diagnostic": "Corrupt structured item identifier to nearest different candidate; report separately.",
+  "no_tuning_on_results": true
+}

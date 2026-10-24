@@ -1,0 +1,7 @@
+rule,source_threshold,test_set,intact_correct,intact_wrong,intact_abstain,intact_n,removal_abstain,removal_false_substitution,removal_n
+S1_rule_margin025,"score>=0.00, margin>=0.25",S1_action_to_warrant,7,0,1,8,8,0,8
+S1_rule_margin025,"score>=0.00, margin>=0.25",S2_finding_to_warrant,0,0,8,8,8,0,8
+S1_rule_margin025,"score>=0.00, margin>=0.25",S3_molina_finding,0,0,7,7,7,0,7
+S2_rule_score022,"score>=0.22, margin>=0.00",S1_action_to_warrant,8,0,0,8,5,3,8
+S2_rule_score022,"score>=0.22, margin>=0.00",S2_finding_to_warrant,7,0,1,8,5,3,8
+S2_rule_score022,"score>=0.22, margin>=0.00",S3_molina_finding,3,2,2,7,5,2,7
