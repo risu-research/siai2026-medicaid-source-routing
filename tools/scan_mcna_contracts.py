@@ -20,8 +20,8 @@ from urllib.error import HTTPError, URLError
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "evidence" / "louisiana" / "mcna_official_source_registry.csv"
 DEFAULT = ["3","4","5","8","9","10"]
-PATTERN = re.compile(r"\b2\s*\.\s*10\s*\.\s*(?:3|7)(?:\s*\.\s*\d+)*\b|\b(?:appeals?|grievances?|fair hearings?|continued benefits|written confirmation)\b", re.I)
-CLAUSE = re.compile(r"\b2\s*\.\s*10\s*\.\s*(?:3|7)(?:\s*\.\s*\d+)*\b")
+PATTERN = re.compile(r"\b2\s*\.\s*10\s*\.\s*\d+(?:\s*\.\s*\d+)*\b|\b(?:appeals?|grievances?|fair hearings?|continued benefits|written confirmation)\b", re.I)
+CLAUSE = re.compile(r"\b2\s*\.\s*10\s*\.\s*\d+(?:\s*\.\s*\d+)*\b")
 
 def get_pdf(url, local_path=None):
     if local_path and local_path.is_file():
