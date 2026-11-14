@@ -22,7 +22,7 @@ The most important discovery from the newly retrieved amendments is [Amendment 9
 
 In the continuation of item 7 (PDF p. 7), **§ 2.10.2.5** reorganizes extension notices into separate duties. It adds **§ 2.10.2.5.3**, requiring resolution as promptly as the member's health condition demands and by the end of the extension. These provisions govern *grievances*. They are distinct from the written follow-up for an *appeal* and the 120-day window for a *state fair hearing*.
 
-The earlier text scan showed only three candidate passages for Amendment 9. Its keyword settings focused too narrowly on §§ 2.10.3 and 2.10.7. Direct inspection of the signed amendment located the additional § 2.10.2 changes. The [screening record](source_screening_20261114.md) now explains the correction.
+The earlier text scan showed only three candidate passages for Amendment 9. Its keyword settings focused too narrowly on §§ 2.10.3 and 2.10.7. Direct inspection of the signed amendment located the additional § 2.10.2 changes. With that section added to the search pattern, the same 15-page official PDF yielded 14 matching passage occurrences, up from three in the earlier scan. The passage count includes repeated text from the amendment's old and new columns. See the [follow-up workflow run](https://github.com/risu-research/siai2026-medicaid-source-routing/actions/runs/43646717737). The [screening record](source_screening_20261114.md) now explains the correction.
 
 ## Other intervening amendments
 
