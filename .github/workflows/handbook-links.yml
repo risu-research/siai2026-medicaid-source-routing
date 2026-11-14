@@ -16,3 +16,9 @@ jobs:
           python-version: '3.13'
       - name: Inspect official public handbook pages
         run: python tools/inspect_mcna_handbook_links.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-handbook-page-sources
+          path: results/handbook-investigation/
+          if-no-files-found: warn
