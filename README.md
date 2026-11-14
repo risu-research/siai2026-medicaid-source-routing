@@ -1,68 +1,61 @@
-# Medicaid appeals audit: source-routing experiments
+# Medicaid appeals: audit sources and retrieval experiments
 
-This repository provides the reproducibility artifact for Moon Hwan Lee's *Corrective Action in Medicaid Appeals: Legal Authority and Source Retrieval* (SIAI 2026, paper #110).
+This repository accompanies Moon Hwan Lee's paper, *Corrective Action in Medicaid Appeals: Legal Authority and Source Retrieval* (SIAI 2026, paper 110; presented November 14, 2026).
 
-The study uses publicly reported Medicaid compliance reviews from Nevada. It tests whether lexical retrieval can locate a designated audit requirement and how the results change when that requirement is unavailable. The input cards and target labels were transcribed by the author from the cited reports.
+A Louisiana Medicaid dental-plan audit reported six unmet elements in its grievance-and-appeal review. The findings called for different corrections. Two policies started the state-hearing filing period at the initial benefit notice, even though the period begins after the plan resolves an appeal. Member handbooks also retained a signed follow-up step that a 2021 contract amendment had removed. In Colorado, a separate audit recorded approved dental care that never reached the member's chart or provider.
 
-## Reproduce the results
+For the retrieval experiments, I used requirement cards prepared from two Nevada Medicaid compliance reports. The tests ask whether a word-based search method selects the assigned audit item, and what happens to its ranking when that item is removed from the eligible results.
 
-Use Python 3.13 in a fresh environment. The versions in `requirements.txt` are the versions used for the archived replay. After installing dependencies, the experiments run without network access.
+## What is here
+
+- **[Louisiana evidence ledger](evidence/louisiana/correction_ledger.csv)** — six audit elements, their proposed corrections, sources, and records needed for review. The accompanying [authority notes](evidence/louisiana/authority_trace.md) follow the dated contract provisions.
+- **[Colorado case notes](evidence/colorado/delivery_evidence.md)** — the report's findings on care coordination, the approved cleanings, and the records that would help trace service delivery.
+- **`data/frozen/`** — three preserved Nevada datasets and their protocols, with SHA-256 checksums.
+- **`scripts/`** — the search experiments and output comparisons.
+- **`results/reference/`** — archived predictions, scores, and threshold-transfer results.
+- **`analysis/`** — the separate index-refitting sensitivity test.
+
+The Louisiana and Colorado files are research notes linked to public records. The executable evaluation covers the Nevada card collections.
+
+## Results at a glance
+
+All three tasks use designated audit-item IDs as their targets. S1 and S2 share the same SilverSummit cards, with different query wording. Molina uses a second health plan's report.
+
+| Test | Questions | Cards | TF–IDF top-1 | BM25 top-1 |
+| --- | ---: | ---: | ---: | ---: |
+| SilverSummit S1: required actions | 8 | 16 | 8/8 | 7/8 |
+| SilverSummit S2: audit findings | 8 | 16 | 7/8 | 5/8 |
+| Molina: audit findings | 7 | 21 | 3/7 | 3/7 |
+
+These are matches to author-assigned item IDs after procedural-stage filtering.
+
+A score-gap rule selected on S1 accepted seven correct matches and held all eight source-removal cases. Applied unchanged to S2 and Molina, it held every answer, including cases with the assigned source present. In a separate full-pool SilverSummit example, removing item 18 increased the gap between the top two TF–IDF scores from 0.006382 to 0.128800. Both conditions and the original scores are recorded in the archived outputs.
+
+## Run the experiments
+
+Python 3.13 and the versions in [`requirements.txt`](requirements.txt) reproduce the archived calculation. After installing those packages, the scripts run locally without fetching reports or datasets.
 
 ```bash
-python -m venv .venv
-# Linux and macOS
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python scripts/run_all.py
-.venv/bin/python analysis/corpus_removal_sensitivity.py
+python -m pip install -r requirements.txt
+python scripts/run_all.py
+python analysis/corpus_removal_sensitivity.py
+python scripts/check_evidence.py
 ```
 
-On Windows PowerShell:
+On Windows PowerShell, use `py -3.13` for the Python commands if that is how Python is installed.
 
-```powershell
-py -3.13 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe scripts\run_all.py
-.\.venv\Scripts\python.exe analysis\corpus_removal_sensitivity.py
-```
+`run_all.py` checks six frozen dataset and protocol hashes, regenerates three experiments, and compares the results against the reference files. The comparison covers 276 prediction rows, 92 score-change records, and six threshold-transfer rows. Generated files appear under `results/reproduced/` and `results/sensitivity/`. The evidence check reviews the structure of the Louisiana ledger and the source links recorded in it.
 
-The first command checks the six frozen input and protocol hashes, runs the three experiments, and compares regenerated outputs with the saved reference files. A successful run ends with:
+The [GitHub Actions workflow](.github/workflows/reproduce.yml) runs the same checks on new commits.
 
-```text
-SUCCESS: all archived outputs reproduced; report in results/reproduced/VERIFICATION.json
-```
+## Sources and research record
 
-It verifies **276 row-level results**, **92 score-change records**, and the six-row threshold-transfer table. Small floating-point differences are accepted within the bounds specified in the comparison script; categorical results must match exactly. The separate sensitivity script compares removing the designated card only from eligible retrieval candidates with rebuilding the TF-IDF index after removal. Its outputs appear in `results/sensitivity/`.
+- [Louisiana: 2025 MCNA compliance review](https://ldh.la.gov/assets/medicaid/EQRO/2025/Compliance/MCNA_LA_2025_CR_Report_F1.pdf), Standard XIII, reviewing calendar-year 2024 materials
+- [Louisiana: MCNA contract amendment 2](https://www.ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd2MCNA.pdf), signed-return and hearing-filing provisions
+- [Colorado: DentaQuest FY2024–2025 review](https://spl.cde.state.co.us/artemis/hcpserials/hcp62125internet/hcp62125202425internet.pdf), Section 2
+- [Nevada: SilverSummit 2025 review](https://www.nevadamedicaid.nv.gov/uploadedFiles/dhcfpnvgov/content/Resources/AdminSupport/Reports/SilverSummit_NVSFY2025_MCO_Compliance_Report_F1.pdf), Standard X
+- [Nevada: Molina 2025 review](https://www.nevadamedicaid.nv.gov/uploadedFiles/dhcfpnvgov/content/Resources/AdminSupport/Reports/Molina_NVSFY2025_MCO_Compliance_Report_F1.pdf), Standard X
 
-## Experiments and files
+The Nevada cards were transcribed and grouped by the author. The S2 execution script was reconstructed from the preserved S1 method and S2 inputs; its outputs match the archived reference results. Source-card accuracy and the legal sufficiency of a selected passage require separate review of the agency documents. For Louisiana, the complete set of contract changes governing 2024 remains an open research item.
 
-| Evaluation | Input | Targets | Cards | Query form |
-| --- | --- | ---: | ---: | --- |
-| SilverSummit S1 | `nevada_heldout_dataset_v1.json` | 8 | 16 | Required audit action |
-| SilverSummit S2 | `nevada_finding_to_warrant_dataset_v2.json` | 8 | 16 | Reported audit finding |
-| Molina | `molina_finding_to_warrant_dataset_v3.json` | 7 | 21 | Reported audit finding |
-
-- `data/frozen/` has the preserved JSON inputs, evaluation protocols, and SHA-256 records.
-- `scripts/` has portable experiment replay and verification code.
-- `results/reference/` has the archived row-level results and threshold comparison.
-- `analysis/` has the post hoc sensitivity calculation.
-- `work/`, `results/reproduced/`, and `results/sensitivity/` are generated locally and excluded from version control.
-
-### Scoring and interpretation
-
-TF-IDF and BM25 rank source cards. The primary index is fit on the complete card pool; a designated source is then excluded from the eligible candidates in each removal trial. An unthresholded top-one ranker necessarily returns another candidate when at least one remains. The more informative diagnostic is how a selected abstention threshold behaves across query formulations. The post hoc refitting analysis evaluates a different absence condition and is reported separately.
-
-The measured target is an **author-designated audit item**, not a determination that every other provision lacks legal relevance. A valid item identifier is assumed by the identity-lookup diagnostic and must be authenticated before practical use. These are curated-card retrieval tests, not an assessment of end-to-end document extraction, legal decision making, or professional reviewer performance.
-
-### Source and implementation provenance
-
-The original execution scripts for S1 and Molina were retained and adapted to use relative paths. The original S2 execution script was not preserved. `scripts/replay_s2_reconstructed.py` recreates its scoring procedure from the retained S1 implementation and S2's frozen input, protocol, and expected outputs. Its row-level predictions and scores were checked against the archived results. This validates reproducibility of the archived calculation, not independent annotation or historical source-code identity.
-
-The source cards are author transcriptions. SHA-256 verification checks that the preserved input bytes are unchanged; it does not independently authenticate the cards against agency originals or verify when they were first prepared.
-
-## Public documents
-
-- [SilverSummit Healthplan, 2025 Nevada compliance review](https://www.nevadamedicaid.nv.gov/uploadedFiles/dhcfpnvgov/content/Resources/AdminSupport/Reports/SilverSummit_NVSFY2025_MCO_Compliance_Report_F1.pdf)
-- [Molina Healthcare of Nevada, 2025 compliance review](https://www.nevadamedicaid.nv.gov/uploadedFiles/dhcfpnvgov/content/Resources/AdminSupport/Reports/Molina_NVSFY2025_MCO_Compliance_Report_F1.pdf)
-- [Nevada Medicaid reports index](https://www.nevadamedicaid.nv.gov/medicaid-members/health-plan-home/reports/)
-
-The government reports are linked rather than redistributed here. This repository contains the transcribed research inputs and the code needed to reproduce the reported retrieval results. No license for reuse of the code or data is granted by this README.
+The code and research data currently have no reuse license. The public agency reports are linked from their original publishers.
