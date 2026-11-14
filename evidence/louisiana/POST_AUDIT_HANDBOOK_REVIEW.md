@@ -39,6 +39,18 @@ The public site returned v3.0 when its pages were queried with `?v=2.5`/`?versio
 
 The comparison therefore supports a specific finding: the explicit *post-call written-submission instruction* described by HSAG is not reproduced in the inspected v3.0 appeal sections, but both newer documents retain an acknowledgment sentence framed around an appeal received in writing. The remaining questions concern clarity and real implementation.
 
+## Availability of the audited PDFs and the CAP
+
+The [December 2025 HSAG report](https://ldh.la.gov/assets/medicaid/EQRO/2025/Compliance/MCNA_LA_2025_CR_Report_F1.pdf), Standard XIII items 13 and 17, names the actual materials supplied for its review: `MCNA_mh-la-adult-en-v2.5` (reported pp. 21–22) and `MCNA_mh-la-epsdt-en-v2.3` (reported pp. 31–32). These are **audit citations to submitted records**, not public copies of those records.
+
+This follow-up searched for the exact filenames, versions, publicly indexed MCNA handbook PDFs, LDH-hosted material, and historical versions offered through MCNA's current handbook pages. The original v2.5 and v2.3 PDF bytes were **not recovered**. As documented by the reproducible source script, the public `?v=` and `?version=` page queries returned the currently published v3.0, rather than the requested audited editions. The PDF hashes recorded above apply only to the **later v3.0** releases.
+
+The HSAG report, **Section 3** (printed p. 3-1), requires MCNA to submit a corrective action plan to HSAG SAFE within 60 calendar days after receiving the final report. Its **Appendix C** (printed p. C-1) is an **unfilled CAP template**, with blanks for interventions, evaluation, responsible individuals, completion dates, approval status, and submission. It is not MCNA's completed or approved CAP.
+
+The [LDH monetary-penalty notice of March 12, 2026](https://ldh.la.gov/assets/docs/BayouHealth/Accountability/2.0/MCNA/MCNA1-16_Notice_of_Monetary_Penalty-_2025_External_Quality_Compliance_Review_3.12.26.pdf), p. 3, instructs MCNA to complete interventions **after CAP approval** and provide completion documents through HSAG SAFE. The notice does not disclose the CAP, identify an approval date, or certify completion. A public copy of the **approved** CAP and implementation evidence was not located during this search.
+
+These are bounded retrieval results. No absence of source publication is treated as proof that the materials were never created, submitted, or approved. In particular, the v3.0 text comparison cannot establish the exact old-to-new redline, formal CAP approval, handbook distribution, or changed member outcomes.
+
 ## Reproduce the document review
 
 From the [repository root](../../README.md), run:
