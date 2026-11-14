@@ -7,6 +7,7 @@ from __future__ import annotations
 
 from html.parser import HTMLParser
 import json
+from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.parse import urljoin
 import re
@@ -36,6 +37,9 @@ def main():
     for key,url in PAGES.items():
         try:
             html, final=fetch(url)
+            out=Path("results/handbook-investigation")/key
+            (out/"chunks").mkdir(parents=True, exist_ok=True)
+            (out/"landing.html").write_text(html,encoding="utf-8")
             parsed=Tags()
             parsed.feed(html)
             print("\n###",key,"bytes",len(html),"resolved",final)
@@ -61,6 +65,7 @@ def main():
             for js in chunks:
                 try:
                     source,_=fetch(urljoin(final,js))
+                    (out/"chunks"/js.rsplit("/",1)[-1]).write_text(source,encoding="utf-8")
                     tags=[m for m in re.finditer(r'pdf|fileUrl|downloadFile|download.*api|signedUrl|/api/|webfiles|preSigned|document',source,re.I)]
                     print("CHUNK",js,"bytes",len(source),"matches",len(tags))
                     for m in tags[:10]:
