@@ -18,7 +18,7 @@ The [chronology CSV](contract_amendment_trail.csv) now includes the original con
 
 The amendment's stated effective date and the execution or state-approval date are separate fields. The full chronology also records Amendments 1 and 3–8, including D4's rate attachment and the B5 and B8 changes outside Section 2.10. For Amendment 12 and Amendment 13, the stated effective dates precede the final approval dates. Amendment 13 also has an internal June 2024 rate-period reference that must be read alongside its July 1 amendment-effective line. This inventory records those dates as found in the available sources and leaves their legal implications for direct review of the agreements.
 
-The [March 12, 2026 monetary-penalty notice](enforcement_followup_2026.md) refers to a contract effective January 1, 2023. Amendment 10, meanwhile, describes an extension of the agreement that began in 2021. The record needs another check before drawing a conclusion about how those descriptions relate.
+The [March 12, 2026 monetary-penalty notice](enforcement_followup_2026.md) refers to a contract effective January 1, 2023. Amendment 10, meanwhile, describes an extension of the agreement that began in 2021. The [2024 legal-source crosswalk](2024_AUTHORITY_CROSSWALK.md) records this difference alongside LDH's public statement that the MCNA dental program began under its contract in 2021. The precise basis of the 2023 reference remains open.
 
 ## Questions for source review
 
