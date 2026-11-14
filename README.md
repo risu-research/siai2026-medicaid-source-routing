@@ -11,7 +11,8 @@ For the retrieval experiments, I used requirement cards prepared from two Nevada
 - **[Louisiana evidence ledger](evidence/louisiana/correction_ledger.csv)** — six audit elements, their proposed corrections, sources, and records needed for review. The accompanying [authority notes](evidence/louisiana/authority_trace.md) follow the dated contract provisions.
 - **[Colorado case notes](evidence/colorado/delivery_evidence.md)** — the report's findings on care coordination, the approved cleanings, and the records that would help trace service delivery.
 - **[Follow-up enforcement record](evidence/louisiana/enforcement_followup_2026.md)** — the 2026 state notice and its implications for the contract history.
-- **[MCNA contract amendment trail](evidence/louisiana/contract_amendment_trail.md)** — dated source inventory for the 2024 legal-authority questions, with a [CSV version](evidence/louisiana/contract_amendment_trail.csv).
+- **[MCNA contract amendment trail](evidence/louisiana/contract_amendment_trail.md)** — dated source inventory and a [complete official link registry](evidence/louisiana/mcna_official_source_registry.csv), including amendments previously missing from the paper.
+- **[Contract source reconstruction](evidence/louisiana/SOURCE_RECONSTRUCTION.md)** — how to locate and inspect later amendments and reproduce page-level evidence extraction.
 - **`data/frozen/`** — three preserved Nevada datasets and their protocols, with SHA-256 checksums.
 - **`scripts/`** — the search experiments and output comparisons.
 - **`results/reference/`** — archived predictions, scores, and threshold-transfer results.
