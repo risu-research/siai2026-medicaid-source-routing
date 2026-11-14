@@ -2,7 +2,7 @@
 
 The Louisiana Department of Health [official contract resource page](https://ldh.la.gov/resources?cat=&d=0&q=RFP&s=0&y=0) lists an executed MCNA contract and Amendments 1–15. The [source registry](mcna_official_source_registry.csv) collects the official PDF links for the original contract and Amendments 1–13, including previously missing Amendments 3–8.
 
-Amendments 4, 5, 8, and 9 include changes to the Statement of Work. Their exact effect on appeal rules has to be checked against the original PDF tables. Amendments 3, 6, and 7 primarily concern capitation rate certifications. Those descriptions locate research priorities; they do not certify that a given appeal clause was unchanged.
+The original amendment tables have now been reviewed for the most relevant intervening changes. Amendment 4 adds rate-certification material; it has no B4 statement-of-work replacement. Amendment 5 contains fifteen B5 changes outside section 2.10. Amendment 8 changes MLR reporting under section 4.5.1, and Amendment 9 modifies grievance extension provisions under sections 2.10.2.4–2.10.2.5. The [clause history](CLAUSE_HISTORY_2024.md) lists source pages. Amendments 3, 6, and 7 primarily concern capitation rate certifications. Those descriptions locate research priorities; they do not certify that a given appeal clause was unchanged.
 
 ## Reusable extraction step
 
@@ -15,6 +15,6 @@ python tools/scan_mcna_contracts.py --only 4 5 8 9 --ocr-on-empty 4 5 8
 
 For offline inspection, put the PDFs in a directory named `N.pdf` by amendment number and use `--local-dir path/to/pdfs`. That allows a reader to reproduce the extraction even when the LDH server limits automated downloads.
 
-GitHub Actions runs a source scan on this work branch. PDF bytes are excluded from the Git repository. When the downloads succeed, the run publishes a temporary artifact containing page references and SHA-256 values.
+GitHub Actions supports the source scan when invoked through its workflow. PDF bytes are excluded from the Git repository. When the downloads succeed, the run publishes a temporary artifact containing page references and SHA-256 values.
 
 The central substantive task is still the amendment comparison: determine whether the 2021 oral-appeal change, the hearing clock, and continued-benefit language survived each later revision during calendar year 2024. The [contract chronology](contract_amendment_trail.md) records the verified dates and outstanding links.
