@@ -6,6 +6,7 @@ short page-level excerpts for research review; it is not a legal verdict.
 from __future__ import annotations
 from html import unescape
 import hashlib
+import os
 import json
 from pathlib import Path
 import re
@@ -63,6 +64,8 @@ def main():
         try:
             binary,final,ctype=fetch(api)
             pages,hits=extract_pdf(binary)
+            if os.environ.get("RISU_SAVE_REVIEW_PDFS")=="1":
+                (OUT/(key+"_v3.pdf")).write_bytes(binary)
             row.update(pdf_status="read",pdf_pages=pages,sha256=hashlib.sha256(binary).hexdigest(),matches=hits,pdf_content_type=ctype)
             print("OFFICIAL",key,"version",official["version"],"pages",pages,"bytes",len(binary),"sha256",row["sha256"],"matches",len(hits),flush=True)
             for hit in hits:
