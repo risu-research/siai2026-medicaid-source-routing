@@ -1,65 +1,59 @@
-# Member handbook text after the 2024 Louisiana audit
+# MCNA member handbooks after the CY2024 audit
 
-The [2025 MCNA compliance review](https://ldh.la.gov/assets/medicaid/EQRO/2025/Compliance/MCNA_LA_2025_CR_Report_F1.pdf) evaluated calendar-year 2024 operations. Under Standard XIII, HSAG found that the Adult Denture and EPSDT member handbooks instructed members to follow an oral appeal with a written submission. The audit identified the supplied files as **Adult Denture v2.5** (pp. 21–22) and **EPSDT v2.3** (pp. 31–32). The required action was to remove the written-follow-up requirement from the handbooks.
+The [2025 MCNA compliance review](https://ldh.la.gov/assets/medicaid/EQRO/2025/Compliance/MCNA_LA_2025_CR_Report_F1.pdf) assessed the plan's calendar-year 2024 operations. Under Standard XIII, HSAG found that the Adult Denture and EPSDT handbooks asked members to submit a written appeal after filing orally. The reviewed editions were Adult Denture **v2.5**, pp. 21–22, and EPSDT **v2.3**, pp. 31–32. The auditor instructed MCNA to remove the follow-up requirement.
 
-MCNA subsequently published version 3.0 of both English handbooks. This record compares the audit's documented finding with what is printed in those later PDFs. The original 2024 handbooks have not been recovered as independent PDF files, so a word-by-word historical redline is not available.
+MCNA's public handbook site now carries English v3.0 editions, both dated August 12, 2025. Their wording gives a view of the later public instructions. The audit-cited v2.5 and v2.3 PDFs were unavailable in the public sources reviewed, so the precise wording changes between editions remain untraced.
 
-## Later public files
+## Later public editions
 
-| Handbook | Public release | Official PDF | Pages | SHA-256 |
+| Handbook | Release date | Official PDF | PDF pages | SHA-256 |
 | --- | --- | --- | ---: | --- |
-| [Adult Denture v3.0](https://handbooks.mcna.net/mh-la-adult-en) | August 12, 2025 | [Download](https://handbooks.mcna.net/api/files/download/689b778236f3559579d5933a) | 40 | `c5e3ac8843f0b77a6aa4c227c3dfce181acf4dcf48f7cfa6b41ef727a7f03b9f` |
-| [EPSDT v3.0](https://handbooks.mcna.net/mh-la-epsdt-en) | August 12, 2025 | [Download](https://handbooks.mcna.net/api/files/download/689b770836f3559579d5679e) | 48 | `5cc2ce95128c72d9fdc8eb937a8cf9db01d1e8b27b462f36dada10bb55d785c5` |
+| [Adult Denture v3.0](https://handbooks.mcna.net/mh-la-adult-en) | Aug. 12, 2025 | [MCNA PDF](https://handbooks.mcna.net/api/files/download/689b778236f3559579d5933a) | 40 | `c5e3ac8843f0b77a6aa4c227c3dfce181acf4dcf48f7cfa6b41ef727a7f03b9f` |
+| [EPSDT v3.0](https://handbooks.mcna.net/mh-la-epsdt-en) | Aug. 12, 2025 | [MCNA PDF](https://handbooks.mcna.net/api/files/download/689b770836f3559579d5679e) | 48 | `5cc2ce95128c72d9fdc8eb937a8cf9db01d1e8b27b462f36dada10bb55d785c5` |
 
-These SHA-256 fingerprints identify the two PDFs obtained from MCNA's public document-download endpoint on November 14, 2026. Source locations below give **both** PDF page numbers and printed handbook page numbers.
+The hashes identify the PDF bytes retrieved from MCNA's public download service on November 14, 2026. Both PDF page numbers and printed handbook pages are recorded below.
 
-## What the new text says
+## Appeal instructions in v3.0
 
-| Question | Adult Denture v3.0 | EPSDT v3.0 | Observation |
+| Question | Adult Denture | EPSDT | Reading |
 | --- | --- | --- | --- |
-| Can a member request an ordinary appeal by phone? | § 16.1, PDF p. 25 (printed p. 23) | § 18.1, PDF p. 33 (printed p. 31) | Both direct the member to call the hotline to request an appeal |
-| Does the standard-appeal timing paragraph refer to receiving an appeal in writing? | § 16.3, PDF p. 25 (printed p. 23) | § 18.3, PDF p. 33 (printed p. 31) | Both open their acknowledgment explanation with **“After we receive your appeal in writing”** |
-| Is a signature required to appoint someone else? | § 16.8, PDF p. 26 (printed p. 24) | § 18.8, PDF p. 34 (printed p. 32) | Both request signed permission for an authorized representative |
-| When does the state-hearing filing window run? | § 18.1, PDF p. 28 (printed p. 26) | § 20.1, PDF p. 36 (printed p. 34) | Both specify 120 days from the date on the Notice of Appeal Resolution |
-| Are service or time limits listed among continued-benefit ending events? | § 16.6, PDF pp. 25–26 (printed pp. 23–24) | § 18.6, PDF pp. 33–34 (printed pp. 31–32) | Both include the authorized service period or limit being reached |
+| Filing an ordinary appeal | § 16.1, PDF p. 25, printed p. 23 | § 18.1, PDF p. 33, printed p. 31 | Members are directed to call the hotline to request an appeal |
+| Acknowledging receipt | § 16.3, PDF p. 25, printed p. 23 | § 18.3, PDF p. 33, printed p. 31 | Both descriptions begin “After we receive your appeal in writing” |
+| Appointing a representative | § 16.8, PDF p. 26, printed p. 24 | § 18.8, PDF p. 34, printed p. 32 | A signed authorization permits another person to act for a member |
+| State fair hearing | § 18.1, PDF p. 28, printed p. 26 | § 20.1, PDF p. 36, printed p. 34 | Both use the date on MCNA's Notice of Appeal Resolution for the 120-day filing period |
+| Continued benefits | § 16.6, PDF pp. 25–26, printed pp. 23–24 | § 18.6, PDF pp. 33–34, printed pp. 31–32 | The service authorization's time period or limit appears among the ending events |
 
-**Oral appeal versus written follow-up.** In the appeal sections of the available v3.0 PDFs, we found the telephone filing instruction and no explicit direction that a member who calls **must send a subsequent written appeal**. The acknowledgment paragraph, however, continues to refer to receiving the appeal *in writing*. A reader could reasonably ask when a telephone appeal is treated as received and acknowledged. This is a document-clarity question for further research. The two statements alone do not establish that MCNA is rejecting oral appeals in practice.
+### Filing by telephone and receiving an acknowledgment
 
-**Representative authorization is a separate step.** The signed form in §§ 16.8 and 18.8 concerns permission for a dentist, legal counsel, or another representative to act for a member. The 2024 audit's elements 13 and 17 concerned written follow-up by the member after **the member's own oral appeal**. The signature printed on the separate state-hearing request form is also a different procedural step.
+Both editions permit members to request an ordinary appeal by telephone. Neither inspected appeal section instructs the caller to send a subsequent written appeal. The acknowledgment paragraphs, however, begin by describing receipt of an appeal **in writing**. A person appealing by phone could find the acknowledgment procedure unclear. Member intake and acknowledgment records would show how the instruction was applied.
 
-**Hearing clock.** In each v3.0 handbook, an earlier paragraph describes 120 days after completion of the appeals process. The dedicated State Fair Hearing section then names the **Notice of Appeal Resolution date**, consistent with the event at issue in audit element 28. That audit criticized two **internal policies**, which cannot be pronounced revised merely from the public handbooks.
+The signed permission form in §§ 16.8 and 18.8 concerns authorized representatives. That form and the separate State Fair Hearing request form serve different purposes from a member's oral appeal.
 
-**Continued benefits.** Both public handbooks list the authorized service/time limit among events ending continued benefits. The audit's item 30 concerned **Policy 13.209**. The handbook text is useful supporting material, with a different document role.
+### Hearing deadline and continued benefits
 
-## What this comparison can establish
+The hearing sections give the filing deadline as 120 days from the date on the **Notice of Appeal Resolution**. A shorter summary elsewhere in both handbooks refers to completion of MCNA's appeal process. The dedicated hearing section identifies the actual notice.
 
-The v3.0 handbooks were publicly released on **August 12, 2025**, after the CY2024 period reviewed by HSAG but before the final report dated **December 2025**. The dates alone cannot show whether these were revisions prompted by an earlier review exchange, an independent editing cycle, or a formally approved corrective action.
+The original audit's item 28 concerned **two internal policies** using the initial adverse-benefit notice as the starting event. The later handbook wording offers an additional source for the correct date; revised internal policies would supply the direct evidence of that correction.
 
-The public site returned v3.0 when its pages were queried with `?v=2.5`/`?version=2.5` for Adult Denture and `?v=2.3`/`?version=2.3` for EPSDT. Those parameters did not retrieve the audited editions. No evidence of the exact historical redline, approval by LDH, mailing to members, or actual intake practice has been recovered in this round.
+Both v3.0 handbooks describe the approved time or service limit among the events ending continued benefits. The audit's item 30 concerned internal **Policy 13.209**, for which a dated revised copy would be the next useful record.
 
-The comparison therefore supports a specific finding: the explicit *post-call written-submission instruction* described by HSAG is not reproduced in the inspected v3.0 appeal sections, but both newer documents retain an acknowledgment sentence framed around an appeal received in writing. The remaining questions concern clarity and real implementation.
+## Document dates and CAP records
 
-## Availability of the audited PDFs and the CAP
+The public v3.0 editions were released on **August 12, 2025**, before HSAG's final report in **December 2025**. Earlier review exchanges, internal revisions and the state approval process would be needed to reconstruct how those editions came about.
 
-The [December 2025 HSAG report](https://ldh.la.gov/assets/medicaid/EQRO/2025/Compliance/MCNA_LA_2025_CR_Report_F1.pdf), Standard XIII items 13 and 17, names the actual materials supplied for its review: `MCNA_mh-la-adult-en-v2.5` (reported pp. 21–22) and `MCNA_mh-la-epsdt-en-v2.3` (reported pp. 31–32). These are **audit citations to submitted records**, not public copies of those records.
+The HSAG report's **Section 3**, printed p. 3-1, calls for a corrective action plan within 60 calendar days of receipt of the final report. **Appendix C**, printed p. C-1, contains the blank submission template. The completed and approved plan was unavailable among the public materials searched.
 
-This follow-up searched for the exact filenames, versions, publicly indexed MCNA handbook PDFs, LDH-hosted material, and historical versions offered through MCNA's current handbook pages. The original v2.5 and v2.3 PDF bytes were **not recovered**. As documented by the reproducible source script, the public `?v=` and `?version=` page queries returned the currently published v3.0, rather than the requested audited editions. The PDF hashes recorded above apply only to the **later v3.0** releases.
+The [March 12, 2026 LDH penalty notice](https://ldh.la.gov/assets/docs/BayouHealth/Accountability/2.0/MCNA/MCNA1-16_Notice_of_Monetary_Penalty-_2025_External_Quality_Compliance_Review_3.12.26.pdf), p. 3, requires MCNA to submit completion documentation after the CAP is approved. The approved plan, approval date, handbook distribution records and completed intervention reports remain useful source targets.
 
-The HSAG report, **Section 3** (printed p. 3-1), requires MCNA to submit a corrective action plan to HSAG SAFE within 60 calendar days after receiving the final report. Its **Appendix C** (printed p. C-1) is an **unfilled CAP template**, with blanks for interventions, evaluation, responsible individuals, completion dates, approval status, and submission. It is not MCNA's completed or approved CAP.
+MCNA's current public pages returned v3.0 when queried using `?v=2.5` or `?version=2.5` for Adult Denture, and `?v=2.3` or `?version=2.3` for EPSDT. The original audited editions were therefore inaccessible through those public URL parameters. Their absence from this retrieval leaves the historical redline and formal correction sequence open.
 
-The [LDH monetary-penalty notice of March 12, 2026](https://ldh.la.gov/assets/docs/BayouHealth/Accountability/2.0/MCNA/MCNA1-16_Notice_of_Monetary_Penalty-_2025_External_Quality_Compliance_Review_3.12.26.pdf), p. 3, instructs MCNA to complete interventions **after CAP approval** and provide completion documents through HSAG SAFE. The notice does not disclose the CAP, identify an approval date, or certify completion. A public copy of the **approved** CAP and implementation evidence was not located during this search.
-
-These are bounded retrieval results. No absence of source publication is treated as proof that the materials were never created, submitted, or approved. In particular, the v3.0 text comparison cannot establish the exact old-to-new redline, formal CAP approval, handbook distribution, or changed member outcomes.
-
-## Reproduce the document review
-
-From the [repository root](../../README.md), run:
+## Source reproduction
 
 ```bash
 python -m pip install 'pymupdf==1.26.4'
 python tools/review_mcna_handbooks.py
 ```
 
-The script reads public metadata from MCNA's handbook pages, fetches both original PDFs, records their SHA-256 values, and locates the specified passages by PDF page. Its JSON output appears in `results/handbook-investigation/official-pdf-review/`. This is a source-reading aid. Interpretations in this report come from inspection of the pages themselves. The [GitHub Actions workflow](../../.github/workflows/handbook-review.yml) supports a fresh run.
+The [source script](../../tools/review_mcna_handbooks.py) reads public version metadata, downloads the two PDFs, computes SHA-256 fingerprints and reports the matching PDF pages. It writes a local JSON record under `results/handbook-investigation/official-pdf-review/`. The [GitHub Actions workflow](../../.github/workflows/handbook-review.yml) runs the same procedure.
 
-For historical-document reconciliation, the highest-value remaining sources are the actual **v2.5** and **v2.3** files cited by HSAG, the approved corrective-action materials, revised policy 13.209, and distribution records.
+The [observation CSV](handbook_observations_2025.csv) carries the page references and document dates for reuse.
