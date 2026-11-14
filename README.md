@@ -44,7 +44,7 @@ python scripts/run_all.py
 python analysis/corpus_removal_sensitivity.py
 ```
 
-The replay verifies six frozen input hashes, regenerates three experiments and compares the results with the archived files. The comparison covers 276 prediction rows, 92 score-change records and six threshold-transfer rows. Outputs are written to `results/reproduced/` and `results/sensitivity/`. On Windows PowerShell, `py -3.13` may be used in place of `python`.
+The replay verifies six frozen input hashes, regenerates three experiments and compares the results with the archived files. The comparison covers 276 prediction rows, 92 score-change records and six threshold-transfer rows. Outputs are written to `results/reproduced/` and `results/sensitivity/`. The replay uses `work/` as a disposable workspace and protects pre-existing folders that it did not create. On Windows PowerShell, `py -3.13` may be used in place of `python`.
 
 The [reproduction workflow](.github/workflows/reproduce.yml) runs these commands on GitHub Actions.
 

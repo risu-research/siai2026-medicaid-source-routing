@@ -19,6 +19,10 @@ PAGES = {
     "adult": ("https://handbooks.mcna.net/mh-la-adult-en", "2.5"),
     "epsdt": ("https://handbooks.mcna.net/mh-la-epsdt-en", "2.3"),
 }
+EXPECTED_SNAPSHOTS = {
+    "adult": ("3.0", "c5e3ac8843f0b77a6aa4c227c3dfce181acf4dcf48f7cfa6b41ef727a7f03b9f"),
+    "epsdt": ("3.0", "5cc2ce95128c72d9fdc8eb937a8cf9db01d1e8b27b462f36dada10bb55d785c5"),
+}
 PASSAGES = {
     "ordinary_appeal_by_phone": r"can call our Member Hotline[^.]{0,100}ask for an appeal",
     "acknowledgment_after_written_appeal": r"After we receive your appeal in writing",
@@ -66,6 +70,14 @@ def main():
         page=metadata(url)
         endpoint="https://handbooks.mcna.net/api/files/download/"+page["version_id"]
         pdf=fetch(endpoint)
+        expected_version,expected_hash = EXPECTED_SNAPSHOTS[key]
+        observed_hash = hashlib.sha256(pdf).hexdigest()
+        if page['version'] != expected_version or observed_hash != expected_hash:
+            raise RuntimeError(
+                f'{key}: the public handbook changed since the 2025 v3.0 snapshot. '
+                f'Expected {expected_version}/{expected_hash}; observed '
+                f'{page["version"]}/{observed_hash}. Read the new PDF before updating the review.'
+            )
         count,passages=read_pdf(pdf)
         queries={}
         for param in ("v","version"):
@@ -78,7 +90,7 @@ def main():
             "official_pdf_url":endpoint,
             "public_metadata":page,
             "audit_identified_prior_version":audited,
-            "pdf_sha256":hashlib.sha256(pdf).hexdigest(),
+            "pdf_sha256":observed_hash,
             "pdf_pages":count,
             "page_locators":passages,
             "old_version_query_results":queries,
