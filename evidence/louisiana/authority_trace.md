@@ -16,7 +16,7 @@ The proposed correction changes the two policies' starting event and retains the
 
 ## Oral appeals: items 13 and 17
 
-The audited handbooks directed members who appealed by phone to submit a signed written follow-up. The [original MCNA contract](https://www.ldh.la.gov/assets/medicaid/ContractsDental/2000506243MCNA-ApprovedContractPacket.pdf) at § 2.10.3.1.2 required a signed confirmation within 15 days and permitted closure when the form was missing. [Amendment 2](https://www.ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd2MCNA.pdf), Attachment B-2, item 9, removed those provisions. Its stated effective date was January 1, 2021, with state approval dated June 25, 2021.
+The audited handbooks directed members who appealed orally to submit a written follow-up. The [original MCNA contract](https://www.ldh.la.gov/assets/medicaid/ContractsDental/2000506243MCNA-ApprovedContractPacket.pdf) at § 2.10.3.1.2 required a signed confirmation within 15 days and permitted closure when the form was missing. [Amendment 2](https://www.ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd2MCNA.pdf), Attachment B-2, item 9, removed those provisions. Its stated effective date was January 1, 2021, with state approval dated June 25, 2021.
 
 A handbook correction would remove the member's extra submission step. The plan's own appeal documentation and any applicable authorization rules for representatives remain separate matters. The audit and amendment show a difference between the governing text and the reviewed instructions. The number of members who received those instructions remains unverified.
 
@@ -29,10 +29,10 @@ For the legal check, the source dates matter:
 | Source | Provision reviewed | What it supplies |
 | --- | --- | --- |
 | [2021 original MCNA contract](https://www.ldh.la.gov/assets/medicaid/ContractsDental/2000506243MCNA-ApprovedContractPacket.pdf) | § 2.10.3.5.4 | Four-event list for plan appeals in the original agreement |
-| [2024 federal regulation](https://www.govinfo.gov/app/details/CFR-2024-title42-vol4/CFR-2024-title42-vol4-sec438-420) | 42 C.F.R. § 438.420(b)(4), (c) | Conditions for continuation and events ending it, addressed in separate provisions |
+| [2024 federal regulation](https://www.govinfo.gov/content/pkg/CFR-2024-title42-vol4/pdf/CFR-2024-title42-vol4-part438.pdf) | 42 C.F.R. § 438.420(b)(4), (c)(1)–(3) | Original authorization unexpired as an eligibility condition; three federal ending circumstances |
 | [2026 emergency contract](https://ldh.la.gov/assets/medicaid/ContractsDental/MCNA/2000996755-MCNA-Approved-Emergency-Contract.pdf) | Attachment B §§ 2.10.3.5 and 2.10.7.9 | Different ending-event lists for plan appeal and fair hearing in a later contract |
 
-[Amendment 10](https://ldh.la.gov/assets/medicaid/Contracts-PC/10.20.23/2000506243_Amd_10_MCNA-CF-6.pdf) extended the contract term through December 31, 2025. The [amendment trail](contract_amendment_trail.md) records the dated documents located to date. Several intervening amendments and the clause-level history governing 2024 still need examination. A proposed addition to policy 13.209 should therefore carry the applicable agreement and appeal stage for legal review. An individual member's continued coverage also depends on the case record.
+The audit's extra ending event appears in the original contract's appeal-duration list. It is not one of the three events enumerated in 2024 federal § 438.420(c). The [detailed source comparison](2024_AUTHORITY_CROSSWALK.md) separates the two. [Amendment 10](https://ldh.la.gov/assets/medicaid/Contracts-PC/10.20.23/2000506243_Amd_10_MCNA-CF-6.pdf) extended the contract term through December 31, 2025. The [amendment trail](contract_amendment_trail.md) records the dated documents located to date. The original agreement and Amendments 1–13 are indexed, with several clause-level changes reviewed. The complete operative text across 2024 still requires final source reconciliation. A proposed addition to policy 13.209 should therefore carry the applicable agreement and appeal stage for legal review. An individual member's continued coverage also depends on the case record.
 
 ## Records and participants: items 6 and 37
 

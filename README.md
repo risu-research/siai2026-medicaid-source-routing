@@ -12,14 +12,15 @@ For the retrieval experiments, I used requirement cards prepared from two Nevada
 - **[Colorado case notes](evidence/colorado/delivery_evidence.md)** — the report's findings on care coordination, the approved cleanings, and the records that would help trace service delivery.
 - **[Follow-up enforcement record](evidence/louisiana/enforcement_followup_2026.md)** — the 2026 state notice and its implications for the contract history.
 - **[MCNA contract amendment trail](evidence/louisiana/contract_amendment_trail.md)** — dated source inventory and a [complete official link registry](evidence/louisiana/mcna_official_source_registry.csv), including amendments previously missing from the paper.
-- **[2024 clause history](evidence/louisiana/CLAUSE_HISTORY_2024.md)** — traced legal changes, with a [reusable change CSV](evidence/louisiana/mcna_clause_changes.csv) and source pages.
+- **[2024 legal-source crosswalk](evidence/louisiana/2024_AUTHORITY_CROSSWALK.md)** — compare federal rules, contract provisions, and the audit's correction requests, with a [CSV dataset](evidence/louisiana/2024_authority_crosswalk.csv).
+- **[2024 clause history](evidence/louisiana/CLAUSE_HISTORY_2024.md)** — dated changes, including the earlier contract language, with a [change CSV](evidence/louisiana/mcna_clause_changes.csv).
 - **[Contract source reconstruction](evidence/louisiana/SOURCE_RECONSTRUCTION.md)** — original PDFs and page-level evidence extraction.
 - **`data/frozen/`** — three preserved Nevada datasets and their protocols, with SHA-256 checksums.
 - **`scripts/`** — the search experiments and output comparisons.
 - **`results/reference/`** — archived predictions, scores, and threshold-transfer results.
 - **`analysis/`** — the separate index-refitting sensitivity test.
 
-The [Louisiana enforcement follow-up](evidence/louisiana/enforcement_followup_2026.md) records a $30,000 penalty assessed in March 2026 across six noncompliant standards. The [contract amendment trail](evidence/louisiana/contract_amendment_trail.md) brings together source dates and amendments relevant to the 2024 review. The identified changes now include Amendment 9's grievance extension rules and Amendment 11's appeal-reversal threshold. The complete 2024 governing text remains under review.
+The [Louisiana enforcement follow-up](evidence/louisiana/enforcement_followup_2026.md) records a $30,000 penalty assessed in March 2026 across six noncompliant standards. The [contract amendment trail](evidence/louisiana/contract_amendment_trail.md) brings together source dates and amendments relevant to the 2024 review. The identified changes now include Amendment 9's grievance extension rules and Amendment 11's appeal-reversal threshold. The original contract's fourth continued-benefits ending event is recorded separately from the three events listed in the 2024 federal regulation. The full 2024 governing text remains under review.
 
 ## Results at a glance
 

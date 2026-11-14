@@ -6,7 +6,7 @@ The [clause-level index](mcna_clause_changes.csv) links the 2021 agreement to la
 
 ### Oral appeals and member signatures
 
-In the original agreement, § 2.10.3.1.2 described a signed written follow-up and allowed an incomplete appeal to be closed if the form was not returned within 15 days (original PDF pp. 95–96). [Amendment 2](https://ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd2MCNA.pdf), Attachment B-2 item 9 (PDF pp. 8–9), struck out those member requirements and left the plan's obligation to document the oral appeal. The 2024 audit later found the older instruction in member handbooks, under its elements 13 and 17.
+In the original agreement, § 2.10.3.1.2 described a signed written follow-up and allowed an incomplete appeal to be closed if the form was not returned within 15 days (original PDF pp. 94–95, printed pp. 87–88). [Amendment 2](https://ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd2MCNA.pdf), Attachment B-2 item 9 (PDF pp. 8–9), struck out those member requirements and left the plan's obligation to document the oral appeal. The 2024 audit later found the older instruction in member handbooks, under its elements 13 and 17.
 
 ### State fair-hearing filing period
 
@@ -14,7 +14,7 @@ In the original agreement, § 2.10.3.1.2 described a signed written follow-up an
 
 ### Benefits continued during an appeal
 
-The [original agreement](https://ldh.la.gov/assets/medicaid/ContractsDental/2000506243MCNA-ApprovedContractPacket.pdf) lists an approved service or time limit being reached as a fourth possible ending event in § 2.10.3.5.4 (PDF p. 97). The 2024 audit asks for an additional event in a submitted policy. Its applicability remains tied to the governing contract version and the appeal stage. A complete 2024 authority conclusion still requires matching that language against all applicable amendments and federal provisions.
+The [original agreement](https://ldh.la.gov/assets/medicaid/ContractsDental/2000506243MCNA-ApprovedContractPacket.pdf) lists an approved service or time limit being reached as a fourth possible ending event in § 2.10.3.5.4 (PDF p. 96, printed p. 89). The 2024 audit asks for that fourth event in a submitted policy. In the 2024 federal regulation, § 438.420(c) lists three end events, and § 438.420(b)(4) addresses an unexpired original authorization at the start of continued benefits. See the [federal-contract-audit comparison](2024_AUTHORITY_CROSSWALK.md). Its applicability remains tied to the governing contract version and the appeal stage. A complete 2024 authority conclusion still requires matching that language against all applicable amendments and federal provisions.
 
 ## A separate 2023 change: grievance extensions
 
@@ -40,6 +40,6 @@ Amendment 11's § 2.10.3.10 addresses a 30% threshold for denied appeals reverse
 
 ## Contract application in 2024
 
-[Amendment 10](https://ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd10MCNA-ApprovedContractPacket.pdf) extended the term of the agreement starting in 2021 through December 2025. [Amendment 12](https://ldh.la.gov/assets/medicaid/ContractsDental/MCNA/2000506243MCNAAmendment12.pdf) states a July 2023 effective date but received procurement approval in June 2024. The later enforcement notice describes a contract effective January 2023. Each date and document description is recorded separately.
+[Amendment 10](https://ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd10MCNA-ApprovedContractPacket.pdf) extended the term of the agreement starting in 2021 through December 2025. [Amendment 12](https://ldh.la.gov/assets/medicaid/ContractsDental/MCNA/2000506243MCNAAmendment12.pdf) states a July 2023 effective date but received procurement approval in June 2024. The later enforcement notice describes a contract effective January 2023, although LDH's dental program page and the executed original contract describe January 2021. The [source comparison](2024_AUTHORITY_CROSSWALK.md) records the discrepancy without treating it as a different signed contract.
 
 At this stage, the indexed modifications demonstrate changes to individual provisions, with particularly strong evidence for Amendment 2, Amendment 9, and Amendment 11. A final consolidated text for every day of 2024 has not been certified. The next useful step is to cross-check the execution history and locate any additional instruments that affected the specific clauses. The [official source registry](mcna_official_source_registry.csv) and [change CSV](mcna_clause_changes.csv) support that review.

@@ -4,7 +4,7 @@ On March 12, 2026, the Louisiana Department of Health issued [a monetary-penalty
 
 The notice lists six standards with unmet elements, including Standard XIII, Grievance and Appeal Systems. That standard had 31 Met, six Not Met, and one Not Applicable elements. LDH assessed **$30,000 in total** and announced a deduction from the next capitation payment. The amount applies across the six noncompliant standards; the notice gives no item-by-item allocation for grievance findings.
 
-The document also cites a **contract effective January 1, 2023**. This is important when linking the earlier 2021 Amendment 2 to obligations during 2024. The full operative contract history has yet to be reconstructed.
+The document also cites a **contract effective January 1, 2023**. This is important when linking the earlier 2021 Amendment 2 to obligations during 2024. The original agreement and Amendments 1–13 have since been indexed in the [contract chronology](contract_amendment_trail.md). LDH's dental program webpage gives January 2021 as the contract start; the notice's January 2023 reference has not been reconciled to a separate executed agreement. The [2024 crosswalk](2024_AUTHORITY_CROSSWALK.md) records both sources.
 
 After CAP approval, the notice requires documentation once the planned interventions have been completed. Separate records would be needed to confirm that completion, the eventual deduction, or a remedy received by an individual member.
 
