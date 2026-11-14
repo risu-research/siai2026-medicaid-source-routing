@@ -1,10 +1,6 @@
 name: Inspect official MCNA contract PDFs
 
 on:
-  push:
-    branches:
-      - 'mcna-amendment-source-reconstruction-*'
-      - 'mcna-clause-history-*'
   workflow_dispatch:
 
 permissions:
@@ -21,8 +17,6 @@ jobs:
           python-version: '3.13'
       - name: Install PDF text extractor
         run: python -m pip install 'pymupdf==1.26.4'
-      - name: Install OCR fallback for font-encoded source PDFs
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr
       - name: Record PDF SHA-256 and candidate clause locations
         run: python tools/scan_mcna_contracts.py --only 9
       - uses: actions/upload-artifact@v4

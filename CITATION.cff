@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Please cite this research artifact if you use its code, datasets, or source analyses."
+type: software
+title: "Medicaid Appeals: Source Evidence and Retrieval Experiments"
+authors:
+  - family-names: Lee
+    given-names: Moon Hwan
+    affiliation: RISU Institute
+repository-code: "https://github.com/risu-research/siai2026-medicaid-source-routing"
+url: "https://github.com/risu-research/siai2026-medicaid-source-routing"
+abstract: >-
+  Research artifacts accompanying the SIAI 2026 paper Corrective Action
+  in Medicaid Appeals: Legal Authority and Source Retrieval. Includes
+  preserved Nevada retrieval experiments, source-linked Louisiana and
+  Colorado audit records, and a post-presentation review of Medicaid
+  dental-plan contract amendments and public member handbooks.
+keywords:
+  - Medicaid
+  - managed care
+  - administrative appeals
+  - audit evidence
+  - information retrieval
+  - research reproducibility
+license: MIT

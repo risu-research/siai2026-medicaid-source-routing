@@ -13,9 +13,9 @@
 | [9](https://ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd9MCNA-ApprovedContractPacket.pdf) | 15 | `b71924d07b36` | Embedded text | 3 |
 | [10](https://ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd10MCNA-ApprovedContractPacket.pdf) | 2 | `f85ddfb34f38` | Embedded text | 0 |
 
-The first-pass scanner searched the 2.10.3 and 2.10.7 clause families along with common wording for appeals, grievances, fair hearings, written confirmation, and continued benefits. It missed the 2.10.2 clause family; the source scanner has since been broadened. These are **candidate passage counts**, not numbers of changed legal provisions. Subsequent direct reading identified Amendment 9, B9 item 7, §§ 2.10.2.4–2.10.2.5 as revisions to grievance extensions and notices. The original hit count is retained as a record of the narrower first-pass search.
+The first-pass scanner searched the 2.10.3 and 2.10.7 clause families along with common wording for appeals, grievances, fair hearings, written confirmation, and continued benefits. It missed the 2.10.2 clause family; the source scanner has since been broadened. These counts show search matches, including repeated text in amendment tables. Subsequent direct reading identified Amendment 9, B9 item 7, §§ 2.10.2.4–2.10.2.5 as revisions to grievance extensions and notices. The original hit count is retained as a record of the narrower first-pass search.
 
-Amendments 4, 5, and 8 yielded substantial OCR text but no matching passage under those search terms. This screening gives a useful lead for manual clause comparison. A zero search result is not an authenticated statement that every later contract retained a provision. Amendment 3's zero result is weaker because it was not OCR-processed.
+Amendments 4, 5, and 8 yielded substantial OCR text but no matching passage under those search terms. The OCR matches helped prioritize the amended tables for manual review. A zero count leaves room for differently worded changes, particularly in Amendment 3, which was read without OCR.
 
 The executed PDFs were downloaded by [GitHub Actions](https://github.com/risu-research/siai2026-medicaid-source-routing/actions/runs/43645177386), and the run saved source hashes, candidate passages, and OCR text in its [temporary artifact](https://github.com/risu-research/siai2026-medicaid-source-routing/actions/runs/43645177386/artifacts/14133319759). SHA-256 values help distinguish the downloaded versions. The [source registry](mcna_official_source_registry.csv) provides stable government URLs.
 
@@ -31,4 +31,4 @@ For the original audit questions, the [clause history](CLAUSE_HISTORY_2024.md) i
 
 The 2026 penalty notice references a contract effective January 1, 2023. Amendment 10 shows the 2021 agreement was extended to December 2025. Read these records together before assigning a final governing clause to any 2024 policy correction.
 
-No state enforcement, implementation, or member-outcome finding is inferred from the text scan.
+The scan records source text and file identity. Later enforcement and implementation records are tracked separately.

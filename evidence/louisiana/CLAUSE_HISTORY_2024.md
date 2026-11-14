@@ -18,11 +18,11 @@ The [original agreement](https://ldh.la.gov/assets/medicaid/ContractsDental/2000
 
 ## A separate 2023 change: grievance extensions
 
-The most important discovery from the newly retrieved amendments is [Amendment 9](https://ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd9MCNA-ApprovedContractPacket.pdf), effective May 1, 2023. Attachment B9, item 7, changes **§ 2.10.2.4** from a mandatory extension instruction to a discretionary one, using *may* instead of *shall* (PDF p. 6).
+[Amendment 9](https://ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd9MCNA-ApprovedContractPacket.pdf), effective May 1, 2023. Attachment B9, item 7, changes **§ 2.10.2.4** from a mandatory extension instruction to a discretionary one, using *may* instead of *shall* (PDF p. 6).
 
 In the continuation of item 7 (PDF p. 7), **§ 2.10.2.5** reorganizes extension notices into separate duties. It adds **§ 2.10.2.5.3**, requiring resolution as promptly as the member's health condition demands and by the end of the extension. These provisions govern *grievances*. They are distinct from the written follow-up for an *appeal* and the 120-day window for a *state fair hearing*.
 
-The earlier text scan showed only three candidate passages for Amendment 9. Its keyword settings focused too narrowly on §§ 2.10.3 and 2.10.7. Direct inspection of the signed amendment located the additional § 2.10.2 changes. With that section added to the search pattern, the same 15-page official PDF yielded 14 matching passage occurrences, up from three in the earlier scan. The passage count includes repeated text from the amendment's old and new columns. See the [follow-up workflow run](https://github.com/risu-research/siai2026-medicaid-source-routing/actions/runs/43646717737). The [screening record](source_screening_20261114.md) now explains the correction.
+The [source screening record](source_screening_20261114.md) documents why the original search missed § 2.10.2. Direct reading of the executed amendment and a broader search located the revised grievance language.
 
 ## Other intervening amendments
 
@@ -42,4 +42,4 @@ Amendment 11's § 2.10.3.10 addresses a 30% threshold for denied appeals reverse
 
 [Amendment 10](https://ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd10MCNA-ApprovedContractPacket.pdf) extended the term of the agreement starting in 2021 through December 2025. [Amendment 12](https://ldh.la.gov/assets/medicaid/ContractsDental/MCNA/2000506243MCNAAmendment12.pdf) states a July 2023 effective date but received procurement approval in June 2024. The later enforcement notice describes a contract effective January 2023, although LDH's dental program page and the executed original contract describe January 2021. The [source comparison](2024_AUTHORITY_CROSSWALK.md) records the discrepancy without treating it as a different signed contract.
 
-At this stage, the indexed modifications demonstrate changes to individual provisions, with particularly strong evidence for Amendment 2, Amendment 9, and Amendment 11. A final consolidated text for every day of 2024 has not been certified. The next useful step is to cross-check the execution history and locate any additional instruments that affected the specific clauses. The [official source registry](mcna_official_source_registry.csv) and [change CSV](mcna_clause_changes.csv) support that review.
+The strongest clause-level records concern Amendments 2, 9 and 11. The [official source registry](mcna_official_source_registry.csv) and [change CSV](mcna_clause_changes.csv) retain the other amendments and their review status. Further execution records would help consolidate the terms applicable throughout 2024.

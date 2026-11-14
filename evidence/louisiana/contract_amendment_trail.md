@@ -20,15 +20,12 @@ The amendment's stated effective date and the execution or state-approval date a
 
 The [March 12, 2026 monetary-penalty notice](enforcement_followup_2026.md) refers to a contract effective January 1, 2023. Amendment 10, meanwhile, describes an extension of the agreement that began in 2021. The [2024 legal-source crosswalk](2024_AUTHORITY_CROSSWALK.md) records this difference alongside LDH's public statement that the MCNA dental program began under its contract in 2021. The precise basis of the 2023 reference remains open.
 
-## Questions for source review
+## Remaining source questions
 
-1. Continue page-level review of the full indexed amendment series, now including the formerly missing Amendments 3–8. The official [LDH resources index](https://www.ldh.la.gov/resources?cat=&d=0&q=RFP&s=0&y=0) lists MCNA amendments.
-2. Reconstruct the text in force during 2024 for the **oral-appeal signed follow-up**, **120-day fair-hearing clock**, and **continued-benefits cessation events**. Preserve each clause's procedural stage.
-3. Record page locations, actual replacement text, effective dates, and relevant approval dates. An amendment heading alone cannot establish which paragraph applied.
-4. Compare the operative clauses with the precise items cited by the compliance review. Keep agency audit findings, governing rules, and the later enforcement notice in separate columns.
+The [LDH resources index](https://www.ldh.la/resources?cat=&d=0&q=RFP&s=0&y=0) contains the original contract and amendments. The open work concerns the combined legal effect of the versions relevant to 2024, including their execution dates and any incorporated instruments. The three audit questions remain the oral-appeal follow-up, the 120-day hearing clock and continued-benefit ending events. The linked clause history records the provisions already checked.
 
-The earlier paper analyzed available passages from the 2021 original contract, Amendment 2, Amendments 11–12, and the later 2026 agreement. This trail adds located intermediate amendments. No conclusion is drawn here that the complete 2024 contract chain has been authenticated.
+The SIAI paper used the original 2021 contract, Amendment 2, Amendments 11–12 and the later 2026 agreement. This follow-up adds the intermediate contracts and records the text changes located in their attachments.
 
 ## Source-text screening, November 14, 2026
 
-A [record of the executable source scan](source_screening_20261114.md) now accompanies this chronology. Executed Amendments 4, 5, and 8 were successfully downloaded from LDH and processed with English OCR because their embedded text was difficult to search. In the first scan, Amendments 4, 5 and 8 had no matches for the selected search terms. Direct review shows Amendment 4 is a rate addendum, B5 contains 15 changes outside § 2.10, and B8 changes § 4.5.1. Amendment 9 also contains § 2.10.2 grievance changes that required a broader clause search. This narrows the next reading task to the amended tables and any differently worded clauses. The scan alone does not settle 2024 applicability.
+A [record of the executable source scan](source_screening_20261114.md) now accompanies this chronology. Executed Amendments 4, 5, and 8 were successfully downloaded from LDH and processed with English OCR because their embedded text was difficult to search. In the first scan, Amendments 4, 5 and 8 had no matches for the selected search terms. Direct review shows Amendment 4 is a rate addendum, B5 contains 15 changes outside § 2.10, and B8 changes § 4.5.1. Amendment 9 also contains § 2.10.2 grievance changes that required a broader clause search. The scanned pages lead back to the amended tables; final 2024 applicability turns on the executed instruments.

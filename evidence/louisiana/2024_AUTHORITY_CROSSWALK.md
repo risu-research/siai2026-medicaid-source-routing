@@ -2,7 +2,7 @@
 
 This research record follows the rules at issue in the Louisiana Department of Health's 2025 compliance review of MCNA Dental, which assessed calendar-year 2024 records. It draws from the federal regulations as published in the **October 1, 2024 CFR edition**, the original executed contract, contract amendments, and HSAG's specific findings.
 
-For each issue, the governing document, what it actually says, and the policy correction requested by the audit are shown separately. The [CSV](2024_authority_crosswalk.csv) contains the same source references for further research.
+Each issue is set out in the same order: federal rule, dated contract language, and the correction requested by HSAG. The [CSV](2024_authority_crosswalk.csv) contains the same source references for further research.
 
 ## 1. Oral appeals: an old handbook instruction
 
@@ -34,7 +34,7 @@ The two federal subsections serve different purposes.
 
 The audit's item 30 cites **42 CFR § 438.420(c)** along with **PAHP contract §§ 2.10.3.5 and 2.10.6.9**. The additional time/service-limit event is presented under the **MCO/PAHP appeals** part of the audit requirement. The 2024 federal § 438.420(c) lists three events; the extra fourth appears in the original MCNA contract. Section 438.420(b)(4) separately addresses whether the original authorization had already expired when continued benefits are requested.
 
-This source distinction matters when describing an audit correction. An instruction to add the contract's fourth clause does not itself decide whether a member's continued coverage was lawfully ended. That would require the applicable full contract history, procedural stage, and member record. The audit's process description reported no examples of member continuation requests.
+The audit asked for the contract's fourth event to appear in MCNA's policy. Determining how continued benefits ended in a particular case would require the contract version, appeal stage and member file. The audited process description reported no member continuation requests.
 
 ## 4. Which contract is meant by “effective January 1, 2023”?
 
@@ -45,10 +45,10 @@ The official records use different descriptions of the agreement.
 - [Amendment 10](https://ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd10MCNA-ApprovedContractPacket.pdf) extended the existing contract term through **December 31, 2025**, including the 2024 audit period.
 - The [March 12, 2026 penalty notice](https://ldh.la.gov/assets/docs/BayouHealth/Accountability/2.0/MCNA/MCNA1-16_Notice_of_Monetary_Penalty-_2025_External_Quality_Compliance_Review_3.12.26.pdf), p. 1, describes the contract governing CY2024 as effective **January 1, 2023**.
 
-The penalty notice does not identify a separate executed 2023 dental contract in the text reviewed here. The other documents establish the original start and the extension of agreement no. **2000506243**. This is a source-description discrepancy, recorded for direct follow-up. It would be premature to label the notice a clerical error or to claim another contract was signed in 2023.
+The original contract and its extension refer to agreement **2000506243**. The penalty notice gives 2023 as its effective-contract date, without naming another executed agreement. The difference remains a source question for the contract file.
 
 ## 5. What the documents establish for 2024
 
 The contract text and the audit provide strong document-level evidence of the original oral-appeal requirement, its deletion in Amendment 2, the corrected hearing clock, and the contractual fourth continued-benefits event. [Amendment 9](https://ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd9MCNA-ApprovedContractPacket.pdf), Attachment B9 item 7, separately revised the grievance extension and notification steps effective May 2023. [Amendment 11](https://ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd11MCNA-ApprovedContractPacket.pdf) added an appeal-reversal threshold effective January 2024.
 
-The executed amendment inventory covers the original agreement and Amendments 1–13. It has not been certified as a consolidated clause-by-clause legal text for every date in 2024. The identified changed sections and their page references are in the [clause-history record](CLAUSE_HISTORY_2024.md). The remaining documentary question is whether any amendment or incorporated state instrument changed these particular provisions before the audit period. The notice, later penalty, approved CAP, and member-level remedy are separate records with separate evidence requirements.
+The [clause history](CLAUSE_HISTORY_2024.md) covers the original agreement and Amendments 1–13, with page references for the relevant changes. A complete consolidated text for each date in 2024 would also require the full execution history and any incorporated state instruments. Evidence of implementation and member outcomes belongs to the later case and CAP records.

@@ -6,7 +6,7 @@ The original amendment tables have now been reviewed for the most relevant inter
 
 ## Reusable extraction step
 
-The [PDF source scanner](../../tools/scan_mcna_contracts.py) can download the selected official PDFs, compute a SHA-256 fingerprint, and list page-level passages matching appeal and hearing terms. It writes a source manifest and a candidate passage CSV. For files with unreadable embedded fonts, the optional OCR fallback renders pages and runs Tesseract. It is applied only to selected documents, with the extraction method recorded beside each passage. The scanner only identifies places to read. A passage match cannot determine which amended text was legally operative.
+The [PDF source scanner](../../tools/scan_mcna_contracts.py) can download the selected official PDFs, compute a SHA-256 fingerprint, and list page-level passages matching appeal and hearing terms. It writes a source manifest and a candidate passage CSV. For files with unreadable embedded fonts, the optional OCR fallback renders pages and runs Tesseract. It is applied only to selected documents, with the extraction method recorded beside each passage. The scanner lists candidate pages for a reader to compare with the signed amendment tables. Contract applicability is recorded separately in the [clause history](CLAUSE_HISTORY_2024.md).
 
 ```bash
 python -m pip install 'pymupdf==1.26.4'
@@ -17,4 +17,4 @@ For offline inspection, put the PDFs in a directory named `N.pdf` by amendment n
 
 GitHub Actions supports the source scan when invoked through its workflow. PDF bytes are excluded from the Git repository. When the downloads succeed, the run publishes a temporary artifact containing page references and SHA-256 values.
 
-The central substantive task is still the amendment comparison: determine whether the 2021 oral-appeal change, the hearing clock, and continued-benefit language survived each later revision during calendar year 2024. The [contract chronology](contract_amendment_trail.md) records the verified dates and outstanding links.
+The amendment comparison follows the 2021 oral-appeal change, the hearing clock and continued-benefit rules through the later contract versions. The [contract chronology](contract_amendment_trail.md) records the verified dates and outstanding links.
