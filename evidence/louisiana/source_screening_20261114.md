@@ -19,6 +19,12 @@ Amendments 4, 5, and 8 yielded substantial OCR text but no matching passage unde
 
 The executed PDFs were downloaded by [GitHub Actions](https://github.com/risu-research/siai2026-medicaid-source-routing/actions/runs/43645177386), and the run saved source hashes, candidate passages, and OCR text in its [temporary artifact](https://github.com/risu-research/siai2026-medicaid-source-routing/actions/runs/43645177386/artifacts/14133319759). SHA-256 values help distinguish the downloaded versions. The [source registry](mcna_official_source_registry.csv) provides stable government URLs.
 
+## Follow-up source scan: scope repaired
+
+After reading Attachment B9 directly, the pattern was broadened from the § 2.10.3/§ 2.10.7 families to all § 2.10 subclauses. The amended script identified **14 matching passage occurrences** in Amendment 9, including § 2.10.2.4. The first scan returned three occurrences. Both used the same official 15-page PDF, with SHA-256 beginning `b71924d07b36`.
+
+See the [follow-up GitHub Actions run](https://github.com/risu-research/siai2026-medicaid-source-routing/actions/runs/43646717737). A passage occurrence may be repeated across the old and revised columns of a contract table, so the count is a search diagnostic. The actual changes are listed by clause and page in [the clause history](CLAUSE_HISTORY_2024.md).
+
 ## What to read next
 
 For the original audit questions, the [clause history](CLAUSE_HISTORY_2024.md) identifies the deleted written follow-up, the 120-day hearing filing clock, and the original contract's continued-benefit ending event. It also documents the newly located grievance extension revisions. Start with Amendment 2, and compare any intervening Attachment B replacements through December 2024, with the complete source inventory and any later revisions affecting these exact terms. The source scan has already narrowed that work.
