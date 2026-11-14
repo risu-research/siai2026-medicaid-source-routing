@@ -1,0 +1,28 @@
+name: Reproduce Nevada experiments
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+      - name: Install research dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Reproduce archived outputs
+        run: python scripts/run_all.py
+      - name: Run removal sensitivity test
+        run: python analysis/corpus_removal_sensitivity.py
+      - name: Check evidence ledger
+        run: python scripts/check_evidence.py
