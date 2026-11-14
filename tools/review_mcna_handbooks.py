@@ -1,91 +1,95 @@
-"""Retrieve official public MCNA handbook PDFs and collect appeal passages.
+"""Locate appeal passages in public MCNA Louisiana member handbooks.
 
-No PDF bytes are committed. Output includes source identities, hashes, and
-short page-level excerpts for research review; it is not a legal verdict.
+The script downloads official current PDFs and records provenance and
+page locations. Source-text findings need human interpretation.
 """
 from __future__ import annotations
 from html import unescape
 import hashlib
-import os
 import json
 from pathlib import Path
 import re
 import sys
-from urllib.parse import urlencode, urljoin
+from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/"results"/"handbook-investigation"/"official-pdf-review"
-PAGES={
-  "adult":{"url":"https://handbooks.mcna.net/mh-la-adult-en","audited":"2.5"},
-  "epsdt":{"url":"https://handbooks.mcna.net/mh-la-epsdt-en","audited":"2.3"},
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "results" / "handbook-investigation" / "official-pdf-review"
+PAGES = {
+    "adult": ("https://handbooks.mcna.net/mh-la-adult-en", "2.5"),
+    "epsdt": ("https://handbooks.mcna.net/mh-la-epsdt-en", "2.3"),
 }
-PATS={
- "oral_appeal":r"\b(?:oral|verbally?|phone|telephone)\b.{0,135}\bappeal|\bappeal.{0,135}\b(?:oral|verbally?|phone|telephone)\b",
- "written_appeal":r"\bappeal.{0,100}\b(?:in writing|written|follow.?up|sign(?:ed|ature)?)\b|\b(?:in writing|written|follow.?up).{0,110}\bappeal\b",
- "fair_hearing":r"\b(?:fair hearing|hearing).{0,145}\b(?:120|days|notice|appeal)\b|\b(?:120 calendar days).{0,145}\b(?:hearing|appeal)\b",
- "benefits":r"\b(?:continued|continuation|authorized).{0,135}\b(?:benefits|services|limits)\b|\b(?:services|benefits).{0,140}\b(?:continu(?:e|ed)|limit)\b",
+PASSAGES = {
+    "ordinary_appeal_by_phone": r"can call our Member Hotline[^.]{0,100}ask for an appeal",
+    "acknowledgment_after_written_appeal": r"After we receive your appeal in writing",
+    "state_hearing_notice_date": r"within\s*120 days of the date on MCNA.s Notice of Appeal Resolution",
+    "hearing_after_appeal_completion": r"120 days after the completion of MCNA.s appeals process",
+    "authorized_service_limit": r"The time period or service limits of a previously authorized service has been met",
+    "authorized_representative_consent": r"one-page form that you must sign and return to us stating that you give permission",
 }
 def fetch(url):
-    req=Request(url,headers={"User-Agent":"Mozilla/5.0 (compatible; RISU public-source-research/1.0)","Accept":"application/pdf,text/html,*/*"})
-    with urlopen(req,timeout=35) as res:
-        data=res.read(12_000_001)
-        if len(data)>12_000_000:raise ValueError("Document over 12 MB limit")
-        return data,res.geturl(),res.headers.get("Content-Type","")
-def next_info(url):
-    raw,actual,ctype=fetch(url)
-    text=raw.decode("utf8",errors="replace")
-    m=re.search(r'<script id="__NEXT_DATA__" type="application/json">([\s\S]*?)</script>',text)
-    if not m:raise RuntimeError("Public page did not expose document metadata")
-    j=json.loads(unescape(m.group(1)))
-    f=j["props"]["pageProps"]["file"]
-    v=f["version"]
-    return {"title":f["title"],"slug":f["slug"],"version":v["number"],"id":v["_id"],"date":v["date"],"page_url":actual}
-def extract_pdf(pdf):
+    req = Request(url,headers={"User-Agent":"Mozilla/5.0 (compatible; RISU-source-research/1.0)"})
+    with urlopen(req,timeout=40) as response:
+        b = response.read(12_000_001)
+        if len(b)>12_000_000:raise ValueError("Source exceeds 12 MB")
+        return b
+def metadata(url):
+    html=fetch(url).decode("utf-8",errors="replace")
+    m=re.search(r'<script id="__NEXT_DATA__" type="application/json">([\s\S]*?)</script>',html)
+    if not m:raise ValueError("No public document-version metadata found")
+    f=json.loads(unescape(m.group(1)))["props"]["pageProps"]["file"]
+    version=f["version"]
+    return {"title":f["title"],"version":version["number"],"date":version["date"],"version_id":version["_id"]}
+def read_pdf(pdf):
     import fitz
-    if not pdf.startswith(b"%PDF"):raise ValueError("API response was not PDF")
+    if not pdf.startswith(b"%PDF"):raise ValueError("The response is not a PDF")
     doc=fitz.open(stream=pdf,filetype="pdf")
-    hits=[]
-    for idx,page in enumerate(doc):
-        text=re.sub(r"\s+"," ",page.get_text("text"))
-        for kind,pattern in PATS.items():
-            matches=list(re.finditer(pattern,text,re.I))
-            for m in matches[:7]:
-                excerpt=text[max(0,m.start()-85):min(len(text),m.end()+145)].strip()
-                hits.append({"pdf_page":idx+1,"kind":kind,"excerpt":excerpt})
-    return len(doc),hits
+    locators={}
+    for name,pattern in PASSAGES.items():
+        occurrences=[]
+        for i,page in enumerate(doc):
+            raw=page.get_text("text")
+            text=re.sub(r"\s+"," ",raw)
+            printed=re.search(r"\bPage\s+(\d+)\b",raw)
+            for match in list(re.finditer(pattern,text,re.I))[:3]:
+                occurrences.append({
+                  "pdf_page":i+1,
+                  "printed_page":int(printed.group(1)) if printed else None,
+                  "excerpt":text[max(0,match.start()-50):min(len(text),match.end()+80)],
+                })
+        locators[name]=occurrences
+    return len(doc),locators
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
     results={}
-    for key,cfg in PAGES.items():
-        official=next_info(cfg["url"])
-        api=urljoin(cfg["url"],"/api/files/download/"+official["id"])
-        row={"landing":official,"audited_version":cfg["audited"],"pdf_api":api}
-        try:
-            binary,final,ctype=fetch(api)
-            pages,hits=extract_pdf(binary)
-            if os.environ.get("RISU_SAVE_REVIEW_PDFS")=="1":
-                (OUT/(key+"_v3.pdf")).write_bytes(binary)
-            row.update(pdf_status="read",pdf_pages=pages,sha256=hashlib.sha256(binary).hexdigest(),matches=hits,pdf_content_type=ctype)
-            print("OFFICIAL",key,"version",official["version"],"pages",pages,"bytes",len(binary),"sha256",row["sha256"],"matches",len(hits),flush=True)
-            for hit in hits:
-                if hit["kind"] in ("oral_appeal","written_appeal","fair_hearing"):
-                    print("  PAGE",hit["pdf_page"],hit["kind"],hit["excerpt"][:290],flush=True)
-        except Exception as exc:
-            row.update(pdf_status="unavailable",pdf_error=f"{type(exc).__name__}: {exc}"[:450])
-            print("OFFICIAL_ERROR",key,row["pdf_error"],flush=True)
-        old=[]
-        for option in ("v","version"):
+    for key,(url,audited) in PAGES.items():
+        page=metadata(url)
+        endpoint="https://handbooks.mcna.net/api/files/download/"+page["version_id"]
+        pdf=fetch(endpoint)
+        count,passages=read_pdf(pdf)
+        queries={}
+        for param in ("v","version"):
             try:
-                historic=next_info(cfg["url"]+"?"+urlencode({option:cfg["audited"]}))
-                old.append({"parameter":option,"version":historic["version"],"id":historic["id"],"date":historic["date"]})
-                print("HISTORY",key,option,"requested",cfg["audited"],"returned",historic["version"],"id",historic["id"],flush=True)
-            except Exception as exc:
-                old.append({"parameter":option,"error":f"{type(exc).__name__}: {exc}"[:170]})
-        row["public_history_queries"]=old
-        results[key]=row
-    path=OUT/"official_pdf_evidence.json"
-    path.write_text(json.dumps(results,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
-    print("Written",path,flush=True)
-    return 0 if all(v.get("pdf_status")=="read" for v in results.values()) else 2
+                queries[param]=metadata(url+"?"+urlencode({param:audited}))["version"]
+            except Exception as ex:
+                queries[param]="unavailable: "+type(ex).__name__
+        results[key]={
+            "source_page":url,
+            "official_pdf_url":endpoint,
+            "public_metadata":page,
+            "audit_identified_prior_version":audited,
+            "pdf_sha256":hashlib.sha256(pdf).hexdigest(),
+            "pdf_pages":count,
+            "page_locators":passages,
+            "old_version_query_results":queries,
+            "method":"Exact source-text location. Human reading required for interpretation.",
+        }
+        print(f"{key}: version={page['version']} pages={count} sha256={results[key]['pdf_sha256']}",flush=True)
+        for name,hits in passages.items():
+            print(" ",name,":",[(x["pdf_page"],x["printed_page"]) for x in hits],flush=True)
+        print(" old-version public URL probes:",queries,flush=True)
+    target=OUT/"official_pdf_evidence.json"
+    target.write_text(json.dumps(results,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
+    print("Wrote",target)
+    return 0
 if __name__=="__main__":sys.exit(main())
