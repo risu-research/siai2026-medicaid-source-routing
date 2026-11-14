@@ -15,4 +15,4 @@ After CAP approval, the notice requires documentation once the planned intervent
 | [December 2025 HSAG report](https://ldh.la.gov/assets/medicaid/EQRO/2025/Compliance/MCNA_LA_2025_CR_Report_F1.pdf) | CY2024 compliance findings, including six unmet elements under Standard XIII |
 | [March 2026 LDH notice](https://ldh.la.gov/assets/docs/BayouHealth/Accountability/2.0/MCNA/MCNA1-16_Notice_of_Monetary_Penalty-_2025_External_Quality_Compliance_Review_3.12.26.pdf) | Aggregate $30,000 assessment and requirements for CAP completion evidence |
 
-The [structured claim checks](../claims/README.md) link these records by program and review period. A claim assigning the full $30,000 to grievance findings is rejected by the sample checker.
+The notice does not allocate the full $30,000 to the grievance-and-appeal findings. The [public handbook follow-up](POST_AUDIT_HANDBOOK_REVIEW.md) also distinguishes the blank CAP template in the December 2025 HSAG report from any completed or approved plan. Neither an approved CAP nor implementation evidence was located in the public sources reviewed.
