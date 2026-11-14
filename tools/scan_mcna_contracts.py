@@ -43,7 +43,7 @@ def run(only, out, local_dir=None, ocr=None):
         if n not in known: raise ValueError("Unknown amendment: " + n)
         item=known[n]
         url=item["official_pdf"]
-        row={"amendment":n,"url":url,"status":"unavailable","source_mode":None,"sha256":None,"pdf_pages":0,"candidate_hits":0,"error":None}
+        row={"amendment":n,"url":url,"status":"unavailable","source_mode":None,"sha256":None,"pdf_pages":0,"candidate_hits":0,"ocr_pages":0,"ocr_chars":0,"error":None}
         try:
             path=(local_dir / (n + ".pdf")) if local_dir else None
             b,mode=get_pdf(url,path)
@@ -62,15 +62,22 @@ def run(only, out, local_dir=None, ocr=None):
                 add_matches(page.get_text("text",sort=True),i+1,"embedded_text")
             if not any(x["amendment"]==n for x in snippets) and n in ocr:
                 print(f"{n}: embedded text unreadable; rendering for English OCR", flush=True)
+                ocr_sections=[]
                 for i,page in enumerate(pdf):
                     img=page.get_pixmap(matrix=fitz.Matrix(1.65,1.65),alpha=False).tobytes("png")
                     cp=subprocess.run(["tesseract","stdin","stdout","-l","eng","--psm","3"],input=img,capture_output=True,timeout=90)
                     if cp.returncode:
                         raise RuntimeError(f"OCR failed on page {i+1}: {cp.stderr.decode(errors='replace')[:100]}")
-                    add_matches(cp.stdout.decode("utf-8",errors="replace"),i+1,"ocr")
+                    recognized=cp.stdout.decode("utf-8",errors="replace")
+                    row["ocr_pages"]+=1
+                    row["ocr_chars"]+=len(recognized.strip())
+                    ocr_sections.append(f"--- PDF PAGE {i+1} ---\\n"+recognized)
+                    add_matches(recognized,i+1,"ocr")
+                (out/f"amendment_{n}_ocr.txt").write_text("\\n".join(ocr_sections),encoding="utf-8")
+                print(f"{n}: OCR pages={row[\x27ocr_pages\x27]}; nonblank characters={row[\x27ocr_chars\x27]}",flush=True)
             row["candidate_hits"]=sum(v["amendment"]==n for v in snippets)
             row["used_ocr"]=bool(n in ocr and row["candidate_hits"])
-            if row["candidate_hits"]==0:row["status"]="read_no_matches"
+            if row["candidate_hits"]==0:row["status"]="read_no_matches"\n            if row["ocr_pages"] and row["ocr_chars"]<max(1000,row["ocr_pages"]*40):row["status"]="ocr_low_text"
         except (ValueError,HTTPError,URLError,TimeoutError,OSError,RuntimeError) as ex:
             row["error"]=str(ex)[:250]
         manifest.append(row)
