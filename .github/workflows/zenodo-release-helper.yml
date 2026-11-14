@@ -1,0 +1,88 @@
+name: Publish reviewed SIAI research release
+
+on:
+  push:
+    branches:
+      - zenodo-release-helper-20261114
+
+permissions:
+  contents: write
+
+concurrency:
+  group: siai-research-release-v1
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'risu-research/siai2026-medicaid-source-routing'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REVIEWED_SHA: 68caa7f6223c3d80a9dd2084abc1bcdc8c6a7082
+    steps:
+      - name: Check reviewed main commit and release status
+        run: |
+          set -euo pipefail
+          current="$(gh api "repos/${GITHUB_REPOSITORY}/git/ref/heads/main" --jq '.object.sha')"
+          if [ "$current" != "$REVIEWED_SHA" ]; then
+            echo "Main has changed; refusing to release a different source snapshot."
+            exit 1
+          fi
+          if gh release view v1.0.0 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release v1.0.0 already exists. No second release will be created."
+            exit 0
+          fi
+          if gh api "repos/${GITHUB_REPOSITORY}/git/ref/tags/v1.0.0" >/dev/null 2>&1; then
+            echo "Tag v1.0.0 already exists without a release. Aborting for manual review."
+            exit 1
+          fi
+      - name: Publish release for Zenodo archiving
+        run: |
+          set -euo pipefail
+          if gh release view v1.0.0 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Existing release preserved."
+            exit 0
+          fi
+          cat > "${RUNNER_TEMP}/siai-release-notes.md" <<'RELEASE_NOTES'
+          ## Research artifact accompanying SIAI 2026 paper 110
+
+          *Corrective Action in Medicaid Appeals: Legal Authority and Source Retrieval*
+          Moon Hwan Lee · RISU Institute · Presented November 14, 2026
+
+          This version archives the three frozen Nevada audit-source retrieval experiments,
+          their protocols and original reference results, and reproduction scripts. It also
+          includes source-linked Louisiana and Colorado audit evidence and later research
+          on MCNA contract amendments and publicly released member handbooks.
+
+          **Reproduction:** Python 3.13; `python -m pip install -r requirements.txt`
+          followed by `python scripts/run_all.py` and
+          `python analysis/corpus_removal_sensitivity.py`.
+
+          **Source scope:** The Nevada experiments were preserved from the SIAI research.
+          Contract-history and handbook review materials were added after the presentation.
+          Agency source PDFs remain at their official publisher URLs.
+
+          See `README.md`, `CITATION.cff`, `ARCHIVE_AND_RELEASE.md`, and
+          `SOURCES_AND_RIGHTS.md` in the attached source archive.
+
+          Release commit: `68caa7f6223c3d80a9dd2084abc1bcdc8c6a7082`
+          RELEASE_NOTES
+          gh release create v1.0.0 \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$REVIEWED_SHA" \
+            --title 'Medicaid Appeals: Source Evidence and Retrieval Experiments v1.0.0' \
+            --notes-file "${RUNNER_TEMP}/siai-release-notes.md" \
+            --latest
+      - name: Verify published release points to reviewed commit
+        run: |
+          set -euo pipefail
+          gh release view v1.0.0 --repo "$GITHUB_REPOSITORY" \
+            --json tagName,url,isDraft,isPrerelease,targetCommitish,publishedAt \
+            --jq '{tag: .tagName, url: .url, draft: .isDraft, prerelease: .isPrerelease, target: .targetCommitish, published: .publishedAt}'
+          tag_commit="$(gh api "repos/${GITHUB_REPOSITORY}/git/ref/tags/v1.0.0" --jq '.object.sha')"
+          if [ "$tag_commit" != "$REVIEWED_SHA" ]; then
+            echo "Tag target differs from reviewed main commit."
+            exit 1
+          fi
+          echo 'Published source tag matches reviewed main commit.'
