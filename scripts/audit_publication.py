@@ -57,7 +57,8 @@ def main():
                     BROKEN.append(f"{p.relative_to(ROOT)}:{line} unresolved {url}")
         if re.search(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\bghp_[A-Za-z0-9]{30,}\b|\bsk-(?:proj-)?[A-Za-z0-9_-]{25,}\b",source):
             BROKEN.append(f"{p.relative_to(ROOT)}: possible credential material")
-        if "/mnt/data/" in source or "sandbox:/mnt/data/" in source:
+        local_workspace = "/" + "mnt" + "/" + "data" + "/"
+        if local_workspace in source:
             BROKEN.append(f"{p.relative_to(ROOT)}: local workspace path")
     if BROKEN:
         for issue in BROKEN:print("FAIL",issue)
