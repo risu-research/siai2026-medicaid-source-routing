@@ -1,0 +1,27 @@
+name: Audit release files
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  archive-files:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate Citation File Format
+        run: |
+          python -m pip install 'cffconvert==2.0.0'
+          cffconvert --validate
+      - name: Check research archive files and links
+        run: |
+          python -m compileall -q scripts analysis tools
+          python scripts/audit_publication.py
