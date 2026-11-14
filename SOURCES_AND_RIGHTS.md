@@ -6,6 +6,6 @@ The factual records are drawn from publicly available documents issued by the Lo
 
 The requirement cards were prepared from public compliance reports. Users should consult the underlying reports for the complete wording and context of each requirement. The license to this repository covers the author's contributions and conveys no rights to third-party material.
 
-The publicly hosted MCNA handbooks and contract PDFs are fetched from their publishers for source review. The GitHub release includes extraction scripts, page references and hashes rather than redistributing those PDF files.
+The publicly hosted MCNA handbooks and contract PDFs are fetched from their publishers for source review. The GitHub release includes extraction scripts, page references and hashes. The PDFs remain available from their publishers.
 
 Cite both the research artifact and the source report when publishing work based on its annotations.
