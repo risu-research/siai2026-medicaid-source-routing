@@ -32,7 +32,7 @@ For the legal check, the source dates matter:
 | [2024 federal regulation](https://www.govinfo.gov/app/details/CFR-2024-title42-vol4/CFR-2024-title42-vol4-sec438-420) | 42 C.F.R. § 438.420(b)(4), (c) | Conditions for continuation and events ending it, addressed in separate provisions |
 | [2026 emergency contract](https://ldh.la.gov/assets/medicaid/ContractsDental/MCNA/2000996755-MCNA-Approved-Emergency-Contract.pdf) | Attachment B §§ 2.10.3.5 and 2.10.7.9 | Different ending-event lists for plan appeal and fair hearing in a later contract |
 
-The full amendment chain governing the audited 2024 period has not been assembled. A proposed addition to policy 13.209 should therefore carry the applicable agreement and appeal stage for legal review. An individual member's continued coverage also depends on the case record.
+[Amendment 10](https://ldh.la.gov/assets/medicaid/Contracts-PC/10.20.23/2000506243_Amd_10_MCNA-CF-6.pdf) extended the contract term through December 31, 2025. The [amendment trail](contract_amendment_trail.md) records the dated documents located to date. Several intervening amendments and the clause-level history governing 2024 still need examination. A proposed addition to policy 13.209 should therefore carry the applicable agreement and appeal stage for legal review. An individual member's continued coverage also depends on the case record.
 
 ## Records and participants: items 6 and 37
 
@@ -44,4 +44,4 @@ The public audit report describes the materials HSAG reviewed. The submitted pol
 
 ## Subsequent enforcement record
 
-In its [March 12, 2026 penalty notice](enforcement_followup_2026.md), LDH referred to the agreement effective January 1, 2023. The document adds a dated clue about the contract governing the 2024 audit period. The relationship between that agreement and the earlier contract amendments needs further source work.
+In its [March 12, 2026 penalty notice](enforcement_followup_2026.md), LDH referred to the agreement effective January 1, 2023. The document adds a dated clue about the contract governing the 2024 audit period. Amendment 10 describes an extension of the earlier contract through December 2025. The meaning of the notice's 2023 effective-contract reference, in light of that extension and any other operative documents, remains an open source question.
