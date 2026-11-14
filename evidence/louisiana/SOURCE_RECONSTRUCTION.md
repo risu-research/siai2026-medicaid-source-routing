@@ -6,11 +6,11 @@ Amendments 4, 5, 8, and 9 include changes to the Statement of Work. Their exact 
 
 ## Reusable extraction step
 
-The [PDF source scanner](../../tools/scan_mcna_contracts.py) can download the selected official PDFs, compute a SHA-256 fingerprint, and list page-level passages matching appeal and hearing terms. It writes a source manifest and a candidate passage CSV. The scanner only identifies places to read. A passage match cannot determine which amended text was legally operative.
+The [PDF source scanner](../../tools/scan_mcna_contracts.py) can download the selected official PDFs, compute a SHA-256 fingerprint, and list page-level passages matching appeal and hearing terms. It writes a source manifest and a candidate passage CSV. For files with unreadable embedded fonts, the optional OCR fallback renders pages and runs Tesseract. It is applied only to selected documents, with the extraction method recorded beside each passage. The scanner only identifies places to read. A passage match cannot determine which amended text was legally operative.
 
 ```bash
 python -m pip install 'pymupdf==1.26.4'
-python tools/scan_mcna_contracts.py --only 3 4 5 8 9 10
+python tools/scan_mcna_contracts.py --only 4 5 8 9 --ocr-on-empty 4 5 8
 ```
 
 For offline inspection, put the PDFs in a directory named `N.pdf` by amendment number and use `--local-dir path/to/pdfs`. That allows a reader to reproduce the extraction even when the LDH server limits automated downloads.
