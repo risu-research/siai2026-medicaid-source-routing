@@ -1,0 +1,30 @@
+name: Inspect official MCNA contract PDFs
+
+on:
+  push:
+    branches:
+      - 'mcna-amendment-source-reconstruction-*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  extract-official-sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install PDF text extractor
+        run: python -m pip install 'pymupdf==1.26.4'
+      - name: Record PDF SHA-256 and candidate clause locations
+        run: python tools/scan_mcna_contracts.py --only 3 4 5 8 9 10
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mcna-contract-source-scan
+          path: results/contracts/scan/
+          if-no-files-found: warn
