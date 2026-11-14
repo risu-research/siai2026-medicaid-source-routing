@@ -26,3 +26,7 @@ jobs:
         run: python analysis/corpus_removal_sensitivity.py
       - name: Check evidence ledger
         run: python scripts/check_evidence.py
+      - name: Check claim-source relationships
+        run: python tools/check_claims.py
+      - name: Test source and date guards
+        run: python -m unittest discover -s tests -v
