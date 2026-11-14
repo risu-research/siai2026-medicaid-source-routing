@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "claims": [
+    {
+      "id": "six-unmet",
+      "kind": "documentary",
+      "source_id": "la_audit",
+      "jurisdiction": "Louisiana",
+      "program": "MCNA Dental",
+      "stage": "administration",
+      "key": "unmet_elements",
+      "value": 6,
+      "statement": "Six grievance-and-appeal elements were scored Not Met."
+    },
+    {
+      "id": "handbook",
+      "kind": "documentary",
+      "source_id": "la_audit",
+      "jurisdiction": "Louisiana",
+      "program": "MCNA Dental",
+      "stage": "plan_appeal",
+      "key": "handbook_signed_followup",
+      "value": true,
+      "statement": "Audited member handbooks retained a signed follow-up instruction."
+    },
+    {
+      "id": "2021-change",
+      "kind": "documentary",
+      "source_id": "la_amend2",
+      "jurisdiction": "Louisiana",
+      "program": "MCNA Dental",
+      "stage": "plan_appeal",
+      "key": "signed_followup_deleted",
+      "value": true,
+      "statement": "Amendment 2 deleted the signed follow-up requirement."
+    },
+    {
+      "id": "2024-operative",
+      "kind": "operative_authority",
+      "source_id": "la_amend2",
+      "jurisdiction": "Louisiana",
+      "program": "MCNA Dental",
+      "stage": "plan_appeal",
+      "as_of": "2024-06-30",
+      "key": "signed_followup_deleted",
+      "value": true,
+      "statement": "The amended clause governed this precise obligation in June 2024."
+    },
+    {
+      "id": "penalty",
+      "kind": "enforcement",
+      "source_id": "la_notice",
+      "jurisdiction": "Louisiana",
+      "program": "MCNA Dental",
+      "stage": "administration",
+      "allocation": "across_six_noncompliant_standards",
+      "key": "penalty_assessed_usd",
+      "value": 30000,
+      "statement": "LDH assessed an aggregate $30,000 penalty."
+    },
+    {
+      "id": "2023-reference",
+      "kind": "documentary",
+      "source_id": "la_notice",
+      "jurisdiction": "Louisiana",
+      "program": "MCNA Dental",
+      "stage": "administration",
+      "key": "contract_effective_date_cited",
+      "value": "2023-01-01",
+      "statement": "The enforcement notice cites a contract effective January 1, 2023."
+    },
+    {
+      "id": "colorado",
+      "kind": "documentary",
+      "source_id": "co_review",
+      "jurisdiction": "Colorado",
+      "program": "DentaQuest CHP+",
+      "stage": "care_coordination",
+      "key": "approved_cleanings_not_reaching_chart_or_provider",
+      "value": true,
+      "statement": "The approved cleanings had not reached the member chart or dental provider."
+    },
+    {
+      "id": "audit-to-penalty",
+      "kind": "audit_to_enforcement",
+      "source_id": "la_audit",
+      "linked_source_id": "la_notice",
+      "jurisdiction": "Louisiana",
+      "program": "MCNA Dental",
+      "stage": "administration",
+      "key": "unmet_elements",
+      "value": 6,
+      "linked_key": "penalty_assessed_usd",
+      "linked_value": 30000,
+      "allocation": "across_six_noncompliant_standards",
+      "statement": "The audit findings preceded a department-wide aggregate sanction."
+    }
+  ]
+}

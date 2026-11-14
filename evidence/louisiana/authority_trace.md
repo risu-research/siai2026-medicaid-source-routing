@@ -41,3 +41,7 @@ Under item 6, two submitted grievance files lacked resolution notices. The next 
 ## Further records
 
 The public audit report describes the materials HSAG reviewed. The submitted policies, complete 2024 amended agreement, completed corrective-action plan, and member-level follow-up records remain useful targets for subsequent document review.
+
+## Subsequent enforcement record
+
+In its [March 12, 2026 penalty notice](enforcement_followup_2026.md), LDH referred to the agreement effective January 1, 2023. The document adds a dated clue about the contract governing the 2024 audit period. The relationship between that agreement and the earlier contract amendments needs further source work.

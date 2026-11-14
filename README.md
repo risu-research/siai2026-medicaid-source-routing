@@ -10,12 +10,14 @@ For the retrieval experiments, I used requirement cards prepared from two Nevada
 
 - **[Louisiana evidence ledger](evidence/louisiana/correction_ledger.csv)** — six audit elements, their proposed corrections, sources, and records needed for review. The accompanying [authority notes](evidence/louisiana/authority_trace.md) follow the dated contract provisions.
 - **[Colorado case notes](evidence/colorado/delivery_evidence.md)** — the report's findings on care coordination, the approved cleanings, and the records that would help trace service delivery.
+- **[Follow-up enforcement record](evidence/louisiana/enforcement_followup_2026.md)** — the 2026 state notice and its implications for the contract history.
+- **[Claim-source checker](evidence/claims/README.md)** — a small documented consistency check with adversarial tests.
 - **`data/frozen/`** — three preserved Nevada datasets and their protocols, with SHA-256 checksums.
 - **`scripts/`** — the search experiments and output comparisons.
 - **`results/reference/`** — archived predictions, scores, and threshold-transfer results.
 - **`analysis/`** — the separate index-refitting sensitivity test.
 
-The Louisiana and Colorado files are research notes linked to public records. The executable evaluation covers the Nevada card collections.
+The later [Louisiana enforcement follow-up](evidence/louisiana/enforcement_followup_2026.md) records a $30,000 penalty assessed in March 2026 across six noncompliant standards. It also raises a contract-version question worth checking against the complete 2024 agreement. The [claim-source checker](evidence/claims/README.md) gives researchers a way to test source identity, scope, and dated authority when assembling evidence.
 
 ## Results at a glance
 
@@ -40,17 +42,20 @@ python -m pip install -r requirements.txt
 python scripts/run_all.py
 python analysis/corpus_removal_sensitivity.py
 python scripts/check_evidence.py
+python tools/check_claims.py
+python -m unittest discover -s tests -v
 ```
 
 On Windows PowerShell, use `py -3.13` for the Python commands if that is how Python is installed.
 
-`run_all.py` checks six frozen dataset and protocol hashes, regenerates three experiments, and compares the results against the reference files. The comparison covers 276 prediction rows, 92 score-change records, and six threshold-transfer rows. Generated files appear under `results/reproduced/` and `results/sensitivity/`. The evidence check reviews the structure of the Louisiana ledger and the source links recorded in it.
+`run_all.py` checks six archived dataset and protocol hashes, regenerates three experiments, and compares the results against the reference files. The comparison covers 276 prediction rows, 92 score-change records, and six threshold-transfer rows. Generated files appear under `results/reproduced/` and `results/sensitivity/`. The evidence check reviews the structure of the Louisiana ledger and the source links recorded in it.
 
-The [GitHub Actions workflow](.github/workflows/reproduce.yml) runs the same checks on new commits.
+The [GitHub Actions workflow](.github/workflows/reproduce.yml) runs these checks on new commits. New evidence records and analyses can be revised as additional records become available. The conference datasets remain available for direct comparisons.
 
 ## Sources and research record
 
 - [Louisiana: 2025 MCNA compliance review](https://ldh.la.gov/assets/medicaid/EQRO/2025/Compliance/MCNA_LA_2025_CR_Report_F1.pdf), Standard XIII, reviewing calendar-year 2024 materials
+- [Louisiana: March 2026 monetary-penalty notice](https://ldh.la.gov/assets/docs/BayouHealth/Accountability/2.0/MCNA/MCNA1-16_Notice_of_Monetary_Penalty-_2025_External_Quality_Compliance_Review_3.12.26.pdf), state assessment and the contract reference
 - [Louisiana: MCNA contract amendment 2](https://www.ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd2MCNA.pdf), signed-return and hearing-filing provisions
 - [Colorado: DentaQuest FY2024–2025 review](https://spl.cde.state.co.us/artemis/hcpserials/hcp62125internet/hcp62125202425internet.pdf), Section 2
 - [Nevada: SilverSummit 2025 review](https://www.nevadamedicaid.nv.gov/uploadedFiles/dhcfpnvgov/content/Resources/AdminSupport/Reports/SilverSummit_NVSFY2025_MCO_Compliance_Report_F1.pdf), Standard X

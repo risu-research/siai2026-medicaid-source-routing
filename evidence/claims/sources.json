@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "la_audit",
+      "title": "2025 MCNA compliance review, Standard XIII",
+      "url": "https://ldh.la.gov/assets/medicaid/EQRO/2025/Compliance/MCNA_LA_2025_CR_Report_F1.pdf",
+      "kind": "audit_report",
+      "issued": "2025-12-12",
+      "jurisdiction": "Louisiana",
+      "program": "MCNA Dental",
+      "stages": [
+        "administration",
+        "plan_appeal",
+        "state_fair_hearing"
+      ],
+      "review_start": "2024-01-01",
+      "review_end": "2024-12-31",
+      "facts": {
+        "unmet_elements": 6,
+        "handbook_signed_followup": true,
+        "hearing_clock_wrong_start": true
+      },
+      "locator": "Executive summary and Appendix B, Standard XIII"
+    },
+    {
+      "id": "la_amend2",
+      "title": "MCNA Contract Amendment 2",
+      "url": "https://www.ldh.la.gov/assets/medicaid/ContractsDental/2000506243Amd2MCNA.pdf",
+      "kind": "contract_amendment",
+      "issued": "2021-06-25",
+      "jurisdiction": "Louisiana",
+      "program": "MCNA Dental",
+      "stages": [
+        "plan_appeal",
+        "state_fair_hearing"
+      ],
+      "effective_from": "2021-01-01",
+      "verified_through": null,
+      "facts": {
+        "signed_followup_deleted": true,
+        "hearing_filing_days": 120,
+        "hearing_clock_start": "appeal_resolution_notice"
+      },
+      "locator": "Attachment B-2, items 9 and 10; stated effective January 1, 2021",
+      "coverage_note": "Complete operative contract chain for 2024 remains open"
+    },
+    {
+      "id": "la_notice",
+      "title": "LDH Notice of Monetary Penalty, March 12, 2026",
+      "url": "https://ldh.la.gov/assets/docs/BayouHealth/Accountability/2.0/MCNA/MCNA1-16_Notice_of_Monetary_Penalty-_2025_External_Quality_Compliance_Review_3.12.26.pdf",
+      "kind": "enforcement_notice",
+      "issued": "2026-03-12",
+      "jurisdiction": "Louisiana",
+      "program": "MCNA Dental",
+      "stages": [
+        "administration"
+      ],
+      "review_start": "2024-01-01",
+      "review_end": "2024-12-31",
+      "assessment_scope": "across_six_noncompliant_standards",
+      "facts": {
+        "penalty_assessed_usd": 30000,
+        "deduction_status": "announced_for_next_capitation_payment",
+        "contract_effective_date_cited": "2023-01-01",
+        "grievance_unmet_elements": 6
+      },
+      "locator": "Notice pp. 1–3",
+      "coverage_note": "No allocation to individual audit elements; completed CAP and actual deduction not verified"
+    },
+    {
+      "id": "co_review",
+      "title": "Colorado DentaQuest CHP+ FY2024–2025 review",
+      "url": "https://spl.cde.state.co.us/artemis/hcpserials/hcp62125internet/hcp62125202425internet.pdf",
+      "kind": "audit_report",
+      "jurisdiction": "Colorado",
+      "program": "DentaQuest CHP+",
+      "stages": [
+        "care_coordination"
+      ],
+      "facts": {
+        "approved_cleanings_not_reaching_chart_or_provider": true
+      },
+      "locator": "Section 2, pp. 2-1–2-3"
+    }
+  ]
+}
