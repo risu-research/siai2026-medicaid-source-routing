@@ -2,7 +2,9 @@
 
 The 2025 external quality review assessed MCNA Dental's grievance-and-appeal materials for calendar year 2024. To evaluate which instruction governed a particular correction, the relevant contract amendments need to be read in their effective sequence. This page records official documents located so far. The [clause history](CLAUSE_HISTORY_2024.md) contains direct comparisons and source pages, with a [change CSV](mcna_clause_changes.csv) for reuse. The [chronology CSV](contract_amendment_trail.csv) provides the dates.
 
-## Documents located
+## Selected contract changes
+
+The [chronology CSV](contract_amendment_trail.csv) now includes the original contract and **every numbered amendment from 1 through 13**. The table below selects those with the most direct bearing on the 2024 grievance-and-appeal analysis. Blank dates in the CSV mark fields that have not been confirmed from the respective signed document.
 
 | Document | Effective date stated | Document focus | Current review |
 | --- | --- | --- | --- |
@@ -14,7 +16,7 @@ The 2025 external quality review assessed MCNA Dental's grievance-and-appeal mat
 | [Amendment 12](https://www.ldh.la.gov/assets/medicaid/ContractsDental/2000506243MCNAAmendment12.pdf) | Jul 1, 2023; approved Jun 3, 2024 | PHI procedure, rural/urban definitions, rate certification | Relevant parts reviewed in the SIAI archive |
 | [Amendment 13](https://www.ldh.la.gov/assets/medicaid/ContractsDental/MCNA/2000506243MCNAAmendment13.pdf) | Jul 1, 2024; approval recorded Sep 24, 2024 | State fiscal year 2025 rate certification | Cover information located; appeal-specific changes need inspection |
 
-The amendment's stated effective date and the execution or state-approval date are separate fields. For Amendment 12 and Amendment 13, the date printed for the change precedes the final approval date. This inventory records those dates as found in the available sources and leaves their legal implications for direct review of the agreements.
+The amendment's stated effective date and the execution or state-approval date are separate fields. The full chronology also records Amendments 1 and 3–8, including D4's rate attachment and the B5 and B8 changes outside Section 2.10. For Amendment 12 and Amendment 13, the stated effective dates precede the final approval dates. Amendment 13 also has an internal June 2024 rate-period reference that must be read alongside its July 1 amendment-effective line. This inventory records those dates as found in the available sources and leaves their legal implications for direct review of the agreements.
 
 The [March 12, 2026 monetary-penalty notice](enforcement_followup_2026.md) refers to a contract effective January 1, 2023. Amendment 10, meanwhile, describes an extension of the agreement that began in 2021. The record needs another check before drawing a conclusion about how those descriptions relate.
 
