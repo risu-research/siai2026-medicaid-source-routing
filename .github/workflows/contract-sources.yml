@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'mcna-amendment-source-reconstruction-*'
+      - 'mcna-clause-history-*'
   workflow_dispatch:
 
 permissions:
@@ -23,7 +24,7 @@ jobs:
       - name: Install OCR fallback for font-encoded source PDFs
         run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr
       - name: Record PDF SHA-256 and candidate clause locations
-        run: python tools/scan_mcna_contracts.py --only 4 5 8 9 --ocr-on-empty 4 5 8
+        run: python tools/scan_mcna_contracts.py --only 9
       - uses: actions/upload-artifact@v4
         if: always()
         with:
