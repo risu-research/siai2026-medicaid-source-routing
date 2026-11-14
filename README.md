@@ -6,6 +6,8 @@ The paper studies how an audit finding leads to a specific correction. Louisiana
 
 The frozen Nevada experiments were part of the SIAI study. The Louisiana contract history and the later handbook comparison were developed after the presentation. Both remain available here, with their source dates and document links.
 
+**Archived version:** [v1.0.0 on Zenodo](https://doi.org/10.5281/zenodo.24235732) · [GitHub release](https://github.com/risu-research/siai2026-medicaid-source-routing/releases/tag/v1.0.0)
+
 ## Results
 
 The search experiments use requirement cards prepared from two Nevada compliance reports. Each target has an author-assigned audit item ID. Top-1 accuracy measures agreement with that ID.
@@ -60,6 +62,6 @@ The underlying agency reports and contracts are linked from their publishers. Th
 
 ## Citation and archive
 
-The [citation file](CITATION.cff) identifies this research artifact. The [release guide](ARCHIVE_AND_RELEASE.md) describes the contents to preserve in Zenodo. The permanent archive DOI can be added after Zenodo records the GitHub release.
+The reviewed [GitHub v1.0.0 release](https://github.com/risu-research/siai2026-medicaid-source-routing/releases/tag/v1.0.0) is preserved on Zenodo: **[DOI 10.5281/zenodo.24235732](https://doi.org/10.5281/zenodo.24235732)**. The [all-versions DOI](https://doi.org/10.5281/zenodo.24235731) points to the latest archived version. The [citation file](CITATION.cff) and [archive record](ARCHIVE_AND_RELEASE.md) contain the version details.
 
 The [MIT license](LICENSE) applies to original contributions in this repository. Source reports, contracts and other third-party publications retain their own terms; [source and rights notes](SOURCES_AND_RIGHTS.md) identify the boundary. Please cite the underlying agency documents when using their content.
