@@ -2,7 +2,7 @@
 
 This repository accompanies Moon Hwan Lee's paper, *Corrective Action in Medicaid Appeals: Legal Authority and Source Retrieval* (SIAI 2026, paper 110; presented November 14, 2026).
 
-A Louisiana Medicaid dental-plan audit reported six unmet elements in its grievance-and-appeal review. The findings called for different corrections. Two policies started the state-hearing filing period at the initial benefit notice, even though the period begins after the plan resolves an appeal. Member handbooks also retained a signed follow-up step that a 2021 contract amendment had removed. In Colorado, a separate audit recorded approved dental care that never reached the member's chart or provider.
+A Louisiana Medicaid dental-plan audit reported six unmet elements in its grievance-and-appeal review. The findings called for different corrections. Two policies started the state-hearing filing period at the initial benefit notice, even though the period begins after the plan resolves an appeal. The audited member handbooks retained a written follow-up instruction that a 2021 contract amendment had removed. In Colorado, a separate audit recorded approved dental care that never reached the member's chart or provider.
 
 For the retrieval experiments, I used requirement cards prepared from two Nevada Medicaid compliance reports. The tests ask whether a word-based search method selects the assigned audit item, and what happens to its ranking when that item is removed from the eligible results.
 
@@ -11,6 +11,7 @@ For the retrieval experiments, I used requirement cards prepared from two Nevada
 - **[Louisiana evidence ledger](evidence/louisiana/correction_ledger.csv)** — six audit elements, their proposed corrections, sources, and records needed for review. The accompanying [authority notes](evidence/louisiana/authority_trace.md) follow the dated contract provisions.
 - **[Colorado case notes](evidence/colorado/delivery_evidence.md)** — the report's findings on care coordination, the approved cleanings, and the records that would help trace service delivery.
 - **[Follow-up enforcement record](evidence/louisiana/enforcement_followup_2026.md)** — the 2026 state notice and its implications for the contract history.
+- **[Post-audit member handbook review](evidence/louisiana/POST_AUDIT_HANDBOOK_REVIEW.md)** — original 2025 Adult Denture and EPSDT PDFs, specific page comparisons, and a [source evidence CSV](evidence/louisiana/handbook_observations_2025.csv).
 - **[MCNA contract amendment trail](evidence/louisiana/contract_amendment_trail.md)** — dated source inventory and a [complete official link registry](evidence/louisiana/mcna_official_source_registry.csv), including amendments previously missing from the paper.
 - **[2024 legal-source crosswalk](evidence/louisiana/2024_AUTHORITY_CROSSWALK.md)** — compare federal rules, contract provisions, and the audit's correction requests, with a [CSV dataset](evidence/louisiana/2024_authority_crosswalk.csv).
 - **[2024 clause history](evidence/louisiana/CLAUSE_HISTORY_2024.md)** — dated changes, including the earlier contract language, with a [change CSV](evidence/louisiana/mcna_clause_changes.csv).
@@ -44,6 +45,10 @@ Python 3.13 and the versions in [`requirements.txt`](requirements.txt) reproduce
 python -m pip install -r requirements.txt
 python scripts/run_all.py
 python analysis/corpus_removal_sensitivity.py
+
+# Independently inspect the current public MCNA handbooks
+python -m pip install pymupdf==1.26.4
+python tools/review_mcna_handbooks.py
 ```
 
 On Windows PowerShell, use `py -3.13` for the Python commands if that is how Python is installed.

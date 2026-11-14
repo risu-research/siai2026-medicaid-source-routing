@@ -1,0 +1,28 @@
+name: Read public MCNA member handbooks
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - tools/review_mcna_handbooks.py
+      - .github/workflows/handbook-review.yml
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install PDF text extractor
+        run: python -m pip install 'pymupdf==1.26.4'
+      - name: Locate relevant passages in public originals
+        run: python tools/review_mcna_handbooks.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mcna-handbook-source-locators
+          path: results/handbook-investigation/official-pdf-review/
+          if-no-files-found: warn
