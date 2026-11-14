@@ -26,3 +26,7 @@ The [March 12, 2026 monetary-penalty notice](enforcement_followup_2026.md) refer
 4. Compare the operative clauses with the precise items cited by the compliance review. Keep agency audit findings, governing rules, and the later enforcement notice in separate columns.
 
 The earlier paper analyzed available passages from the 2021 original contract, Amendment 2, Amendments 11–12, and the later 2026 agreement. This trail adds located intermediate amendments. No conclusion is drawn here that the complete 2024 contract chain has been authenticated.
+
+## Source-text screening, November 14, 2026
+
+A [record of the executable source scan](source_screening_20261114.md) now accompanies this chronology. Executed Amendments 4, 5, and 8 were successfully downloaded from LDH and processed with English OCR because their embedded text was difficult to search. The scan found no literal appeal, grievance, or 2.10.3/2.10.7 matches in those extracted texts. This narrows the next reading task to the amended tables and any differently worded clauses. The scan alone does not settle 2024 applicability.

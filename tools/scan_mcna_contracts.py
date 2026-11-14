@@ -76,7 +76,7 @@ def run(only, out, local_dir=None, ocr=None):
                 (out/f"amendment_{n}_ocr.txt").write_text("\n".join(ocr_sections),encoding="utf-8")
                 print(f"{n}: OCR pages={row['ocr_pages']}; nonblank characters={row['ocr_chars']}",flush=True)
             row["candidate_hits"]=sum(v["amendment"]==n for v in snippets)
-            row["used_ocr"]=bool(n in ocr and row["candidate_hits"])
+            row["used_ocr"]=bool(row["ocr_pages"])
             if row["candidate_hits"]==0:row["status"]="read_no_matches"
             if row["ocr_pages"] and row["ocr_chars"]<max(1000,row["ocr_pages"]*40):row["status"]="ocr_low_text"
         except (ValueError,HTTPError,URLError,TimeoutError,OSError,RuntimeError) as ex:
